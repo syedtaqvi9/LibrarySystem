@@ -1,0 +1,542 @@
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\NFT_Trade.dll.config
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\NFT_Trade.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\NFT_Trade.pdb
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\csc.exe
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\csc.exe.config
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\csc.rsp
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\csi.exe
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\csi.exe.config
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\csi.rsp
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.AppContext.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Console.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.IO.Compression.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Net.Http.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Net.Sockets.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.ValueTuple.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Xml.XPath.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\vbc.exe
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\vbc.exe.config
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\vbc.rsp
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\VBCSCompiler.exe
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\EntityFramework.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\EntityFramework.SqlServer.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Security.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Newtonsoft.Json.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Owin.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\System.Web.Helpers.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\System.Web.Mvc.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\System.Web.Razor.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\System.Web.Webpages.Deployment.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\System.Web.Webpages.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\System.Web.Webpages.Razor.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\EntityFramework.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\EntityFramework.SqlServer.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Security.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Newtonsoft.Json.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\System.Web.Razor.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\System.Web.Webpages.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\System.Web.Webpages.Deployment.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\System.Web.Webpages.Razor.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\System.Web.Helpers.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\System.Web.Mvc.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\obj\Debug\NFT_Trade.csproj.AssemblyReference.cache
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\obj\Debug\NFT_Trade.csproj.CoreCompileInputs.cache
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\obj\Debug\NFT_Trade.csproj.CopyComplete
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\obj\Debug\NFT_Trade.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\obj\Debug\NFT_Trade.pdb
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\RestSharp.dll
+C:\Users\bilal\source\repos\NFT_Trade\NFT_Trade\bin\RestSharp.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\NFT_Trade.dll.config
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\NFT_Trade.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\NFT_Trade.pdb
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\csc.exe
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\csc.exe.config
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\csc.rsp
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\csi.exe
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\csi.exe.config
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\csi.rsp
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.Managed.Core.targets
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.AppContext.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Collections.Immutable.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Console.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Globalization.Calendars.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.IO.Compression.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.IO.FileSystem.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Net.Http.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Net.Sockets.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Reflection.Metadata.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.ValueTuple.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Xml.XmlDocument.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Xml.XPath.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\vbc.exe
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\vbc.exe.config
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\vbc.rsp
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\VBCSCompiler.exe
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\roslyn\VBCSCompiler.exe.config
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\EntityFramework.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\EntityFramework.SqlServer.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Security.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.Web.Infrastructure.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Newtonsoft.Json.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Owin.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\RestSharp.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\System.Web.Helpers.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\System.Web.Mvc.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\System.Web.Razor.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\System.Web.Webpages.Deployment.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\System.Web.Webpages.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\System.Web.Webpages.Razor.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\EntityFramework.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\EntityFramework.SqlServer.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Security.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Newtonsoft.Json.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\RestSharp.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\System.Web.Razor.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\System.Web.Webpages.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\System.Web.Webpages.Deployment.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\System.Web.Webpages.Razor.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\System.Web.Helpers.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\System.Web.Mvc.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\obj\Debug\NFT_Trade.csproj.AssemblyReference.cache
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\obj\Debug\NFT_Trade.csproj.CoreCompileInputs.cache
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\obj\Debug\NFT_Trade.csproj.CopyComplete
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\obj\Debug\NFT_Trade.dll
+E:\Nodlays Projects\NFT_Trade\NFT_Trade\obj\Debug\NFT_Trade.pdb
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\NFT_Trade.dll.config
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\NFT_Trade.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\NFT_Trade.pdb
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\csc.exe
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\csc.exe.config
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\csc.rsp
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\csi.exe
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\csi.exe.config
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\csi.rsp
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\Microsoft.Managed.Core.targets
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.AppContext.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Collections.Immutable.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Console.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Globalization.Calendars.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.IO.Compression.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.IO.FileSystem.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Net.Http.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Net.Sockets.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Reflection.Metadata.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.ValueTuple.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Xml.XmlDocument.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Xml.XPath.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\vbc.exe
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\vbc.exe.config
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\vbc.rsp
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\VBCSCompiler.exe
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\roslyn\VBCSCompiler.exe.config
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\BouncyCastle.Crypto.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\EntityFramework.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\EntityFramework.SqlServer.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Google.Protobuf.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\K4os.Compression.LZ4.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\K4os.Compression.LZ4.Streams.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\K4os.Hash.xxHash.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.Owin.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.Owin.Security.Cookies.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.Owin.Security.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.Owin.Security.OAuth.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.Web.Infrastructure.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\MySql.Data.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Newtonsoft.Json.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Owin.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\PagedList.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\PagedList.Mvc.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\RestSharp.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Buffers.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Memory.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Numerics.Vectors.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Web.Helpers.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Web.Mvc.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Web.Razor.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Web.Webpages.Deployment.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Web.Webpages.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Web.Webpages.Razor.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Ubiety.Dns.Core.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Zstandard.Net.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\EntityFramework.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\EntityFramework.SqlServer.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Google.Protobuf.pdb
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Google.Protobuf.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\K4os.Compression.LZ4.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\K4os.Compression.LZ4.Streams.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\K4os.Hash.xxHash.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.Owin.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.Owin.Security.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.Owin.Security.Cookies.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.Owin.Security.OAuth.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\MySql.Data.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Newtonsoft.Json.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\PagedList.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\PagedList.Mvc.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\RestSharp.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Buffers.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Memory.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Numerics.Vectors.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Web.Razor.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Web.Webpages.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Web.Webpages.Deployment.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Web.Webpages.Razor.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Web.Helpers.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\System.Web.Mvc.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\obj\Debug\NFT_Trade.csprojAssemblyReference.cache
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\obj\Debug\NFT_Trade.csproj.CoreCompileInputs.cache
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\obj\Debug\NFT_Trade.csproj.CopyComplete
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\obj\Debug\NFT_Trade.dll
+D:\DotNet_Projects\NFT Lib Project\NFT_Trade\obj\Debug\NFT_Trade.pdb
+E:\NftLib\NFT_Trade\bin\NFT_Trade.dll.config
+E:\NftLib\NFT_Trade\bin\NFT_Trade.dll
+E:\NftLib\NFT_Trade\bin\NFT_Trade.pdb
+E:\NftLib\NFT_Trade\bin\roslyn\csc.exe
+E:\NftLib\NFT_Trade\bin\roslyn\csc.exe.config
+E:\NftLib\NFT_Trade\bin\roslyn\csc.rsp
+E:\NftLib\NFT_Trade\bin\roslyn\csi.exe
+E:\NftLib\NFT_Trade\bin\roslyn\csi.exe.config
+E:\NftLib\NFT_Trade\bin\roslyn\csi.rsp
+E:\NftLib\NFT_Trade\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\NftLib\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\NftLib\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\NftLib\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\NftLib\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\NftLib\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\NftLib\NFT_Trade\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\NftLib\NFT_Trade\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\NftLib\NFT_Trade\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\NftLib\NFT_Trade\bin\roslyn\Microsoft.Managed.Core.targets
+E:\NftLib\NFT_Trade\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\NftLib\NFT_Trade\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.AppContext.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Collections.Immutable.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Console.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Globalization.Calendars.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.IO.Compression.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.IO.FileSystem.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Net.Http.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Net.Sockets.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Reflection.Metadata.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.ValueTuple.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Xml.XmlDocument.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Xml.XPath.dll
+E:\NftLib\NFT_Trade\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\NftLib\NFT_Trade\bin\roslyn\vbc.exe
+E:\NftLib\NFT_Trade\bin\roslyn\vbc.exe.config
+E:\NftLib\NFT_Trade\bin\roslyn\vbc.rsp
+E:\NftLib\NFT_Trade\bin\roslyn\VBCSCompiler.exe
+E:\NftLib\NFT_Trade\bin\roslyn\VBCSCompiler.exe.config
+E:\NftLib\NFT_Trade\bin\BouncyCastle.Crypto.dll
+E:\NftLib\NFT_Trade\bin\EntityFramework.dll
+E:\NftLib\NFT_Trade\bin\EntityFramework.SqlServer.dll
+E:\NftLib\NFT_Trade\bin\Google.Protobuf.dll
+E:\NftLib\NFT_Trade\bin\K4os.Compression.LZ4.dll
+E:\NftLib\NFT_Trade\bin\K4os.Compression.LZ4.Streams.dll
+E:\NftLib\NFT_Trade\bin\K4os.Hash.xxHash.dll
+E:\NftLib\NFT_Trade\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\NftLib\NFT_Trade\bin\Microsoft.Owin.dll
+E:\NftLib\NFT_Trade\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\NftLib\NFT_Trade\bin\Microsoft.Owin.Security.Cookies.dll
+E:\NftLib\NFT_Trade\bin\Microsoft.Owin.Security.dll
+E:\NftLib\NFT_Trade\bin\Microsoft.Owin.Security.OAuth.dll
+E:\NftLib\NFT_Trade\bin\Microsoft.Web.Infrastructure.dll
+E:\NftLib\NFT_Trade\bin\MySql.Data.dll
+E:\NftLib\NFT_Trade\bin\Newtonsoft.Json.dll
+E:\NftLib\NFT_Trade\bin\Owin.dll
+E:\NftLib\NFT_Trade\bin\PagedList.dll
+E:\NftLib\NFT_Trade\bin\PagedList.Mvc.dll
+E:\NftLib\NFT_Trade\bin\RestSharp.dll
+E:\NftLib\NFT_Trade\bin\System.Buffers.dll
+E:\NftLib\NFT_Trade\bin\System.Memory.dll
+E:\NftLib\NFT_Trade\bin\System.Numerics.Vectors.dll
+E:\NftLib\NFT_Trade\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\NftLib\NFT_Trade\bin\System.Web.Helpers.dll
+E:\NftLib\NFT_Trade\bin\System.Web.Mvc.dll
+E:\NftLib\NFT_Trade\bin\System.Web.Razor.dll
+E:\NftLib\NFT_Trade\bin\System.Web.Webpages.Deployment.dll
+E:\NftLib\NFT_Trade\bin\System.Web.Webpages.dll
+E:\NftLib\NFT_Trade\bin\System.Web.Webpages.Razor.dll
+E:\NftLib\NFT_Trade\bin\Ubiety.Dns.Core.dll
+E:\NftLib\NFT_Trade\bin\Zstandard.Net.dll
+E:\NftLib\NFT_Trade\bin\EntityFramework.xml
+E:\NftLib\NFT_Trade\bin\EntityFramework.SqlServer.xml
+E:\NftLib\NFT_Trade\bin\Google.Protobuf.pdb
+E:\NftLib\NFT_Trade\bin\Google.Protobuf.xml
+E:\NftLib\NFT_Trade\bin\K4os.Compression.LZ4.xml
+E:\NftLib\NFT_Trade\bin\K4os.Compression.LZ4.Streams.xml
+E:\NftLib\NFT_Trade\bin\K4os.Hash.xxHash.xml
+E:\NftLib\NFT_Trade\bin\Microsoft.Owin.xml
+E:\NftLib\NFT_Trade\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\NftLib\NFT_Trade\bin\Microsoft.Owin.Security.xml
+E:\NftLib\NFT_Trade\bin\Microsoft.Owin.Security.Cookies.xml
+E:\NftLib\NFT_Trade\bin\Microsoft.Owin.Security.OAuth.xml
+E:\NftLib\NFT_Trade\bin\MySql.Data.xml
+E:\NftLib\NFT_Trade\bin\Newtonsoft.Json.xml
+E:\NftLib\NFT_Trade\bin\PagedList.xml
+E:\NftLib\NFT_Trade\bin\PagedList.Mvc.xml
+E:\NftLib\NFT_Trade\bin\RestSharp.xml
+E:\NftLib\NFT_Trade\bin\System.Buffers.xml
+E:\NftLib\NFT_Trade\bin\System.Memory.xml
+E:\NftLib\NFT_Trade\bin\System.Numerics.Vectors.xml
+E:\NftLib\NFT_Trade\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\NftLib\NFT_Trade\bin\System.Web.Razor.xml
+E:\NftLib\NFT_Trade\bin\System.Web.Webpages.xml
+E:\NftLib\NFT_Trade\bin\System.Web.Webpages.Deployment.xml
+E:\NftLib\NFT_Trade\bin\System.Web.Webpages.Razor.xml
+E:\NftLib\NFT_Trade\bin\System.Web.Helpers.xml
+E:\NftLib\NFT_Trade\bin\System.Web.Mvc.xml
+E:\NftLib\NFT_Trade\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\NftLib\NFT_Trade\obj\Debug\NFT_Trade.csprojAssemblyReference.cache
+E:\NftLib\NFT_Trade\obj\Debug\NFT_Trade.csproj.CoreCompileInputs.cache
+E:\NftLib\NFT_Trade\obj\Debug\NFT_Trade.csproj.CopyComplete
+E:\NftLib\NFT_Trade\obj\Debug\NFT_Trade.dll
+E:\NftLib\NFT_Trade\obj\Debug\NFT_Trade.pdb
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\NFT_Trade.dll.config
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\NFT_Trade.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\NFT_Trade.pdb
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\csc.exe
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\csc.exe.config
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\csc.rsp
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\csi.exe
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\csi.exe.config
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\csi.rsp
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.AppContext.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Collections.Immutable.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Console.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Globalization.Calendars.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.IO.Compression.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.IO.FileSystem.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Net.Http.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Net.Sockets.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Reflection.Metadata.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.ValueTuple.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Xml.XPath.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\vbc.exe
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\vbc.exe.config
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\vbc.rsp
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\VBCSCompiler.exe
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\roslyn\VBCSCompiler.exe.config
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\BouncyCastle.Crypto.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\EntityFramework.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\EntityFramework.SqlServer.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Fizzler.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Fizzler.Systems.HtmlAgilityPack.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Google.Protobuf.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\HtmlAgilityPack.CssSelectors.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\HtmlAgilityPack.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\K4os.Compression.LZ4.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\K4os.Compression.LZ4.Streams.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\K4os.Hash.xxHash.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.Owin.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.Owin.Security.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.Web.Infrastructure.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\MySql.Data.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Newtonsoft.Json.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Owin.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\PagedList.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\PagedList.Mvc.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\RestSharp.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Buffers.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Memory.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Numerics.Vectors.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Web.Helpers.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Web.Mvc.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Web.Razor.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Web.Webpages.Deployment.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Web.Webpages.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Web.Webpages.Razor.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Ubiety.Dns.Core.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Zstandard.Net.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\EntityFramework.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\EntityFramework.SqlServer.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Fizzler.Systems.HtmlAgilityPack.pdb
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Google.Protobuf.pdb
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Google.Protobuf.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\HtmlAgilityPack.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\HtmlAgilityPack.CssSelectors.pdb
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\K4os.Compression.LZ4.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\K4os.Compression.LZ4.Streams.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\K4os.Hash.xxHash.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.Owin.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.Owin.Security.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\MySql.Data.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Newtonsoft.Json.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\PagedList.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\PagedList.Mvc.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\RestSharp.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Buffers.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Memory.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Numerics.Vectors.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Web.Razor.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Web.Webpages.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Web.Webpages.Deployment.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Web.Webpages.Razor.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Web.Helpers.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\System.Web.Mvc.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Bitbuket\NFTLIB\NFT_Trade\obj\Debug\NFT_Trade.csproj.AssemblyReference.cache
+D:\Bitbuket\NFTLIB\NFT_Trade\obj\Debug\NFT_Trade.csproj.CoreCompileInputs.cache
+D:\Bitbuket\NFTLIB\NFT_Trade\obj\Debug\NFT_Trade.csproj.CopyComplete
+D:\Bitbuket\NFTLIB\NFT_Trade\obj\Debug\NFT_Trade.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\obj\Debug\NFT_Trade.pdb
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\JetBrains.Annotations.dll
+D:\Bitbuket\NFTLIB\NFT_Trade\bin\JetBrains.Annotations.xml

@@ -1,0 +1,102 @@
+﻿@{
+    ViewBag.Title = "User Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .square {
+        background: #F2F2F2;
+        width: 100%;
+        /* height: 100%;*/
+    }
+
+    h1, h2 {
+        color: #2a2b6e;
+    }
+
+    p {
+        color: #5dba47 !important;
+    }
+</style>
+
+<div class="m-15" id="alertMsg" style="font-weight:bold;">
+
+</div>
+
+<div style="min-height:700px;" id="pdfholder">
+
+    <div class="row text-center">
+        <h1><strong><u>User Dashboard</u></strong></h1>
+    </div>
+
+    <div class="row m-5">
+        <div class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3 col-xs-6">
+            <div class="square">
+                <br /><br />
+                <center><p><strong>@*Total Warehouses*@</strong></p></center>
+                <br />
+                <center><h2>Date</h2></center>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-6">
+            <div class="square">
+                <br /><br />
+                <center><p><strong>@*Total Articles*@</strong></p></center>
+                <br />
+                <center><h2> Date</h2></center>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row m-5">
+        <div class="col-lg-offset-3 col-lg-3 col-md-offset-3 col-md-3 col-xs-6">
+            <div class="square">
+                <br /><br />
+                <center><p><strong>@*Total Variants*@</strong></p></center>
+                <br />
+                <center><h2>  Data</h2></center>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-6">
+            <div class="square">
+                <br /><br />
+                <center><p><strong>@*Total Suppliers*@</strong></p></center>
+                <br />
+                <center><h2> Data</h2></center>
+            </div>
+        </div>
+    </div>
+</div>
+@*<script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script>
+
+        function downloadPdf() {
+            var d = new Date();
+
+            var filename = "dummy file";
+
+
+            const analysis = this.document.getElementById("pdfholder");
+            console.log(analysis);
+            console.log(window);
+            var opt = {
+                margin: 0,
+                filename: String(filename),
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
+            };
+
+            //$('#space1').hide();
+
+            html2pdf().from(analysis).set(opt).save();
+
+            setTimeout(function () { location.reload(); }, 5000);
+            //location.reload();
+        }
+
+        //downloadPdf().then
+        //function Reloader() {
+
+        //}
+
+    </script>*@

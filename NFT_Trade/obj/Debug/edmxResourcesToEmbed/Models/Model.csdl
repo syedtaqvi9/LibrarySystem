@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ph17933550275_NftTradeDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="RetrievingCollection">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="one_day_volume" Type="Single" />
+    <Property Name="one_day_change" Type="Single" />
+    <Property Name="one_day_sales" Type="Single" />
+    <Property Name="one_day_average_price" Type="Single" />
+    <Property Name="seven_day_volume" Type="Single" />
+    <Property Name="seven_day_change" Type="Single" />
+    <Property Name="seven_day_sales" Type="Single" />
+    <Property Name="seven_day_average_price" Type="Single" />
+    <Property Name="thirty_day_volume" Type="Single" />
+    <Property Name="thirty_day_change" Type="Single" />
+    <Property Name="thirty_day_sales" Type="Single" />
+    <Property Name="thirty_day_average_price" Type="Single" />
+    <Property Name="total_volume" Type="Single" />
+    <Property Name="total_sales" Type="Single" />
+    <Property Name="total_supply" Type="Single" />
+    <Property Name="count" Type="Single" />
+    <Property Name="num_owners" Type="Int32" />
+    <Property Name="average_price" Type="Single" />
+    <Property Name="num_reports" Type="Int32" />
+    <Property Name="market_cap" Type="Single" />
+    <Property Name="floor_price" Type="Int32" />
+    <Property Name="banner_image_url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="featured_image_url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="image_url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="large_image_url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="slug" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="telegram_url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="twitter_username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="instagram_username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Int32" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="355" FixedLength="false" Unicode="true" />
+    <Property Name="Contact" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="Int32" />
+    <Property Name="IsActive" Type="Int32" />
+    <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="ph17933550275_NftTradeDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="RetrievingCollections" EntityType="Self.RetrievingCollection" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ph17933550275_NftTradeDBModelStoreContainer" CdmEntityContainer="ph17933550275_NftTradeDBEntities">
+    <EntitySetMapping Name="RetrievingCollections">
+      <EntityTypeMapping TypeName="ph17933550275_NftTradeDBModel.RetrievingCollection">
+        <MappingFragment StoreEntitySet="RetrievingCollection">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="one_day_volume" ColumnName="one_day_volume" />
+          <ScalarProperty Name="one_day_change" ColumnName="one_day_change" />
+          <ScalarProperty Name="one_day_sales" ColumnName="one_day_sales" />
+          <ScalarProperty Name="one_day_average_price" ColumnName="one_day_average_price" />
+          <ScalarProperty Name="seven_day_volume" ColumnName="seven_day_volume" />
+          <ScalarProperty Name="seven_day_change" ColumnName="seven_day_change" />
+          <ScalarProperty Name="seven_day_sales" ColumnName="seven_day_sales" />
+          <ScalarProperty Name="seven_day_average_price" ColumnName="seven_day_average_price" />
+          <ScalarProperty Name="thirty_day_volume" ColumnName="thirty_day_volume" />
+          <ScalarProperty Name="thirty_day_change" ColumnName="thirty_day_change" />
+          <ScalarProperty Name="thirty_day_sales" ColumnName="thirty_day_sales" />
+          <ScalarProperty Name="thirty_day_average_price" ColumnName="thirty_day_average_price" />
+          <ScalarProperty Name="total_volume" ColumnName="total_volume" />
+          <ScalarProperty Name="total_sales" ColumnName="total_sales" />
+          <ScalarProperty Name="total_supply" ColumnName="total_supply" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="num_owners" ColumnName="num_owners" />
+          <ScalarProperty Name="average_price" ColumnName="average_price" />
+          <ScalarProperty Name="num_reports" ColumnName="num_reports" />
+          <ScalarProperty Name="market_cap" ColumnName="market_cap" />
+          <ScalarProperty Name="floor_price" ColumnName="floor_price" />
+          <ScalarProperty Name="banner_image_url" ColumnName="banner_image_url" />
+          <ScalarProperty Name="featured_image_url" ColumnName="featured_image_url" />
+          <ScalarProperty Name="image_url" ColumnName="image_url" />
+          <ScalarProperty Name="large_image_url" ColumnName="large_image_url" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="slug" ColumnName="slug" />
+          <ScalarProperty Name="telegram_url" ColumnName="telegram_url" />
+          <ScalarProperty Name="twitter_username" ColumnName="twitter_username" />
+          <ScalarProperty Name="instagram_username" ColumnName="instagram_username" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ph17933550275_NftTradeDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,280 @@
+﻿@using PagedList.Mvc
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NFT LIB | Contact us</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="NODLAYS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="~/Content/images/favicon.ico" type="image/png" sizes="16x16">
+    <script type="text/javascript" src="~/Content/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <style type="text/css">
+        @@media only screen and (max-width : 768px) {
+            .imgsocial {
+                width: 20%;
+                height: auto;
+            }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container-fluid">
+            <a href="@Url.Action("CoinGecko","SuperAdmin")"><img src="~/Content/images/NFTLIB_logo_v3.png" width="140"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-md-3">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="font-size:large">Collections <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("Marketplace","SuperAdmin")" style="font-size:large">Marketplaces <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" action="@Url.Action("Collection","SuperAdmin")">
+                    <input list="searchValues" onkeyup="searchValue(this.value)" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <datalist id="searchValues" onchange="javascript:handleSearch(this)">
+                    </datalist>
+                    <button type="submit" id="searchBtn" class="btn btn-primary" hidden>Add <i class="icon-database-insert position-right"></i></button>
+
+                    @*<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>*@
+                    @*<a class="btn btn-outline-success my-2 my-sm-0" style="margin-left:12px" href="@Url.Action("Login","Auth")">Login</a>*@
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="border-bottom"></div>
+    <br>
+
+    <div class="container" m-10>
+        <div class="container" style="background-color: black">
+            <br>
+            <div style="text-align: center;">
+                <h1 style="">
+                    <b style="">
+                        <font color="white">CONTACT US</font>
+                    </b>
+                </h1>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">
+                        <span style="font-weight: 700;">
+                            <font color="#FFf">We're here to help you.<br></font>
+                        </span>
+                    </h2>
+                    <br>
+                    <h4 style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">
+                        <span style="font-weight: 700;">
+                            <font color="#fff">For any concerns, feedback and suggestion please contact us at contact@nftlib.io</font>
+                        </span>
+                    </h4>
+                </div>
+                <div class="col-md-6">
+                    <!-- Basic layout-->
+                    <form action="@Url.Action("PostContact","SuperAdmin")" method="post">
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <div class="text-left panel-title" style="color: @ViewBag.Color" id="alertMsg">
+                                    @ViewBag.Message
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="form-group" style="padding-top:15px">
+                                    <label class="text-bold" style="color:white">Name:<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" placeholder="Enter Your Name Here!" name="Name" style="color:white" required>
+                                </div>
+                                <div class="form-group" style="padding-top:15px">
+                                    <label class="text-bold" style="color:white">Email:<span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" placeholder="Enter Your Email Here!" name="Email" style="color:white" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-bold" style="color:white">Message:<span class="text-danger">*</span></label>
+                                    <textarea rows="5" cols="5" class="form-control" placeholder="Enter your message here" name="Message" style="color:white" required></textarea>
+                                </div>
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-primary">Submit form <i class="icon-arrow-right14 position-right"></i></button>
+                                </div>
+                                <br><br>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- /basic layout -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="hidedisc alert alert-warning alert-dismissible fade show" role="alert">
+        <strong style="font-size:12px;"><i class="fa fa-exclamation-triangle fa-lg"></i> <u>IMPORTANT DISCLAIMER:</u></strong>
+        <span style="font-size:13px;">All information provided on our website, social media pages and other platforms is for general information only and it’s procured from third party sources. We offer no warranty for the content provided regarding accuracy. The content we provide is in no way financial advice or legal advice. NFT’s are a highly risky investing vehicle and you should consult a financial advisor before making any decision. No content on our website is meant to be a solicitation or offer; all the content is for information only.</span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <!--Footer STARTS -->
+    <footer class="page-footer font-small indigo pt-3">
+        <!-- Footer Links -->
+        <div class="container-fluid text-md-left">
+            <!-- Grid row -->
+            <div class="row row-cols-12 mx-1">
+                <!-- Grid column -->
+                <div class="col mx-auto">
+                    <img class="pb-3" src="~/Content/images/NFTLIB_logo_v3.png" width="170">
+                    <p style="font-size:17px; font-weight:500;">Nftlib provides a fundamental analysis of the NFT market. We are tracking all key indicators necessary for users to learn about any collection.</p>
+                </div>
+
+                <div class="col mx-auto text-md-left d-flex justify-content-center" style="text-align: center;">
+
+                    <!-- Links -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="~/Content/images/fb.png" width="50"></a></span>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="~/Content/images/insta.png" width="50"></a></span>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="~/Content/images/linkedin.png" width="50"></a></span>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="~/Content/images/twitter.png" width="50"></a></span>
+                        </li>
+
+                        <li>
+                            <div class="row pt-md-5 pt-5">
+                                <div class="col-md-6"><span class="px-md-3"><a href="@Url.Action("Contact","SuperAdmin")"><font color="#480a25">Contact</font></a></span></div>
+                                <div class="col-md-6"><span class="px-md-3"><a href=""><font color="#480a25">Disclaimer</font></a></span></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="row">
+                                <div class="col-md-6"><span class="px-md-3"><a href="@Url.Action("About","SuperAdmin")"><font color="#480a25">About us</font></a></span></div>
+                                <div class="col-md-6"><span class="px-md-3"><a href=""><font color="#480a25">Terms of service</font></a></span></div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col mx-auto text-md-left" style="text-align: center;" ">
+
+                    <!-- Links -->
+                    <h5 class="font-weight-bold mb-4 footer-heading">Stay up to date</h5>
+                    <p style="font-size:17px; font-weight:500;">Get the latest updates from us regarding new collections tracked, analytics and upcoming features (we won't spam you with promotional material).</p>
+
+                    <ul class="list-unstyled">
+                        <form class="mt-2" action="@Url.Action("Newsletter","SuperAdmin")" method="post">
+                            <div class="input-group">
+                                <div class="col-md-12 pl-0 pb-2">
+                                    <input type="email" class="form-control" placeholder="email@gmail.com">
+                                </div>
+
+                                <div class="col-md-12 pt-md-0 pl-0 pt-3">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="submit">Subscribe now</button>
+                                    </span>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </form>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+
+        <div class="container text-center py-4">
+            <div class="row">
+                <div class="col-md-12">
+                    ©2021 nftlib. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+
+        <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fa fa-arrow-up" style="color:#1396fe;"></i></a>
+    </footer>
+    <!--Footer ENDS -->
+
+    <script type="text/javascript">
+
+        function searchValue(key) {
+            if (key != "") {
+                $.ajax({
+                    type: 'Post',
+                    url: "../SuperAdmin/GetSearchValues",
+                    dataType: "json",
+                    data: {
+                        key: key
+                    },
+                    success: function (response) {
+                        $('#searchValues').empty();
+                        var i = 0;
+                        $.each(response, function () {
+                            $('#searchValues').append('<option value="' + response[i] + '">' + response[i] + '</option>');
+                            i++;
+                        });
+                    },
+                    error: function () {
+                        // alert("Search ajax Failed");
+                    }
+                });
+            }
+        }
+
+        function handleSearch(elm) {
+            alert("hi");
+            var elmval = elm.value;
+            $('#searchBtn').click();
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            // scroll body to 0px on click
+            $('#back-to-top').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 400);
+                return false;
+            });
+        });
+    </script>
+
+</body>
+</html>

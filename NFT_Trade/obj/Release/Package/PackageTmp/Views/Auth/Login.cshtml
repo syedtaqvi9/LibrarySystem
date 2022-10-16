@@ -1,0 +1,152 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/assets/images/p2pLogo.png">
+
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/colors.css" rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
+    <!-- Core JS files -->
+    <script type="text/javascript" src="~/Content/assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/loaders/blockui.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/ui/nicescroll.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/ui/drilldown.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/ui/fab.min.js"></script>
+    <!-- /core JS files -->
+    <!-- Theme JS files -->
+    <script type="text/javascript" src="~/Content/assets/js/plugins/forms/styling/uniform.min.js"></script>
+
+    <script type="text/javascript" src="~/Content/assets/js/core/app.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/pages/login.js"></script>
+
+    <script type="text/javascript" src="~/Content/assets/js/plugins/ui/ripple.min.js"></script>
+    <!-- /theme JS files -->
+
+</head>
+
+<body class="login-container m-10">
+    <br />
+
+
+    @*string names = "European Union,Great Britian,Andorra,United Arab Emirates,Afghanistan,Antigua and Barbuda,Anguilla,Albania,Armenia,Angola,Antarctica,Argentina,American Samoa,Austria,Australia,Aruba,Åland Islands,Azerbaijan,Bosnia and Herzegovina,Barbados,Bangladesh,Belgium,Burkina Faso,Bulgaria,Bahrain,Burundi,Benin,Saint Barthélemy,Bermuda,Brunei Darussalam,Bolivia (Plurinational State of),Bonaire; Sint Eustatius and Saba,Brazil,Bahamas (the),Bhutan,Bouvet Island,Botswana,Belarus,Belize,Canada,Cocos (Keeling) Islands (the),Congo (the Dem Republic of the),Central African Republic,Congo,Switzerland,Côte d'Ivoire,Cook Islands ,Chile,Cameroon,China,Colombia,Costa Rica,Cuba,Cabo Verde,Curaçao,Christmas Island,Cyprus,Czechia,Germany,Djibouti,Denmark,Dominica,Dominican Republic,Algeria,Ecuador,Estonia,Egypt,Western Sahara,Eritrea,Spain,Ethiopia,European Union,Finland,Fiji,Falkland Islands,Micronesia (Federated States of),Faroe Islands ,France,Gabon,United Kingdom,Grenada,Georgia,French Guiana,Guernsey,Ghana,Gibraltar,Greenland,Gambia (the),Guinea,Guadeloupe,Equatorial Guinea,Greece,South Georgia and the South Sandwich Islands,Guatemala,Guam,Guinea-Bissau,Guyana,Hong Kong,Heard Island and McDonald Islands,Honduras,Croatia,Haiti,Hungary,Indonesia,Ireland,Israel,Isle of Man,India,British Indian Ocean Territory,Iraq,Iran (Islamic Republic of),Iceland,Italy,Jersey,Jamaica,Jordan,Japan,Kenya,Kyrgyzstan,Cambodia,Kiribati,Comoros,Saint Kitts and Nevis,Korea (the Democratic People's Republic of),Korea (the Republic of),Kuwait,Cayman Islands (the),Kazakhstan,Lao People's Democratic Republic,Lebanon,Saint Lucia,Liechtenstein,Sri Lanka,Liberia,Lesotho,Lithuania,Luxembourg,Latvia,Libya,Morocco,Monaco,Moldova (the Republic of),Montenegro,Saint Martin (French part),Madagascar,Marshall Islands,Republic of North Macedonia,Mali,Myanmar,Mongolia,Macao,Northern Mariana Islands,Martinique,Mauritania,Montserrat,Malta,Mauritius,Maldives,Malawi,Mexico,Malaysia,Mozambique,Namibia,New Caledonia,Niger,Norfolk Island,Nigeria,Nicaragua,Netherlands,Norway,Nepal,Nauru,Niue,New Zealand,Oman,Panama,Peru,French Polynesia,Papua New Guinea,Philippines,Pakistan,Poland,Saint Pierre and Miquelon,Pitcairn,Puerto Rico,Palestine; State of,Portugal,Palau,Paraguay,Qatar,Réunion,Romania,Serbia,Russian Federation,Rwanda,Saudi Arabia,Solomon Islands,Seychelles,Sudan,Sweden,Singapore,Saint Helena; Ascension and Tristan da Cunha,Slovenia,Svalbard and Jan Mayen,Slovakia,Sierra Leone,San Marino,Senegal,Somalia,Suriname,South Sudan,Sao Tome and Principe,El Salvador,Sint Maarten (Dutch part),Syrian Arab Republic,Eswatini,Turks and Caicos Islands,Chad,French Southern Territories,Togo,Thailand,Tajikistan,Tokelau,Timor-Leste,Turkmenistan,Tunisia,Tonga,Turkey,Trinidad and Tobago,Tuvalu,Taiwan (Province of China),Tanzania; United Republic of,Ukraine,Uganda,United States Minor Outlying Islands,United States of America,Uruguay,Uzbekistan,Holy See,Saint Vincent and the Grenadines,Venezuela (Bolivarian Republic of),Virgin Islands (British),Virgin Islands (U.S.),Viet Nam,Vanuatu,Wallis and Futuna,Samoa,Yemen,Mayotte,South Africa,Zambia,Zimbabwe";
+
+        string[] Origins = names.Split(',');
+        string[] countryArray = {"European Union", "Great Britian", "Andorra", "United Arab Emirates", "Afghanistan", "Antigua and Barbuda", "Anguilla", "Albania", "Armenia", "Angola", "Antarctica", "Argentina", "American Samoa", "Austria", "Australia", "Aruba", "Åland Islands", "Azerbaijan", "Bosnia and Herzegovina", "Barbados", "Bangladesh", "Belgium", "Burkina Faso", "Bulgaria", "Bahrain", "Burundi", "Benin", "Saint Barthélemy", "Bermuda", "Brunei Darussalam", "Bolivia (Plurinational State of)", "Bonaire, Sint Eustatius and Saba", "Brazil", "Bahamas (the)", "Bhutan", "Bouvet Island", "Botswana", "Belarus", "Belize", "Canada", "Cocos (Keeling) Islands (the)", "Congo (the Dem Republic of the)", "Central African Republic", "Congo", "Switzerland", "Côte d'Ivoire", "Cook Islands ", "Chile", "Cameroon", "China", "Colombia", "Costa Rica", "Cuba", "Cabo Verde", "Curaçao", "Christmas Island", "Cyprus", "Czechia", "Germany", "Djibouti", "Denmark", "Dominica", "Dominican Republic", "Algeria", "Ecuador", "Estonia", "Egypt", "Western Sahara", "Eritrea", "Spain", "Ethiopia", "European Union", "Finland", "Fiji", "Falkland Islands", "Micronesia (Federated States of)", "Faroe Islands ", "France", "Gabon", "United Kingdom", "Grenada", "Georgia", "French Guiana", "Guernsey", "Ghana", "Gibraltar", "Greenland", "Gambia (the)", "Guinea", "Guadeloupe", "Equatorial Guinea", "Greece", "South Georgia and the South Sandwich Islands", "Guatemala", "Guam", "Guinea-Bissau", "Guyana", "Hong Kong", "Heard Island and McDonald Islands", "Honduras", "Croatia", "Haiti", "Hungary", "Indonesia", "Ireland", "Israel", "Isle of Man", "India", "British Indian Ocean Territory", "Iraq", "Iran (Islamic Republic of)", "Iceland", "Italy", "Jersey", "Jamaica", "Jordan", "Japan", "Kenya", "Kyrgyzstan", "Cambodia", "Kiribati", "Comoros", "Saint Kitts and Nevis", "Korea (the Democratic People's Republic of)", "Korea (the Republic of)", "Kuwait", "Cayman Islands (the)", "Kazakhstan", "Lao People's Democratic Republic", "Lebanon", "Saint Lucia", "Liechtenstein", "Sri Lanka", "Liberia", "Lesotho", "Lithuania", "Luxembourg", "Latvia", "Libya", "Morocco", "Monaco", "Moldova (the Republic of)", "Montenegro", "Saint Martin (French part)", "Madagascar", "Marshall Islands", "Republic of North Macedonia", "Mali", "Myanmar", "Mongolia", "Macao", "Northern Mariana Islands", "Martinique", "Mauritania", "Montserrat", "Malta", "Mauritius", "Maldives", "Malawi", "Mexico", "Malaysia", "Mozambique", "Namibia", "New Caledonia", "Niger", "Norfolk Island", "Nigeria", "Nicaragua", "Netherlands", "Norway", "Nepal", "Nauru", "Niue", "New Zealand", "Oman", "Panama", "Peru", "French Polynesia", "Papua New Guinea", "Philippines", "Pakistan", "Poland", "Saint Pierre and Miquelon", "Pitcairn", "Puerto Rico", "Palestine, State of", "Portugal", "Palau", "Paraguay", "Qatar", "Réunion", "Romania", "Serbia", "Russian Federation", "Rwanda", "Saudi Arabia", "Solomon Islands", "Seychelles", "Sudan", "Sweden", "Singapore", "Saint Helena, Ascension and Tristan da Cunha", "Slovenia", "Svalbard and Jan Mayen", "Slovakia", "Sierra Leone", "San Marino", "Senegal", "Somalia", "Suriname", "South Sudan", "Sao Tome and Principe", "El Salvador", "Sint Maarten (Dutch part)", "Syrian Arab Republic", "Eswatini", "Turks and Caicos Islands", "Chad", "French Southern Territories", "Togo", "Thailand", "Tajikistan", "Tokelau", "Timor-Leste", "Turkmenistan", "Tunisia", "Tonga", "Turkey", "Trinidad and Tobago", "Tuvalu", "Taiwan (Province of China)", "Tanzania, United Republic of", "Ukraine", "Uganda", "United States Minor Outlying Islands", "United States of America", "Uruguay", "Uzbekistan", "Holy See", "Saint Vincent and the Grenadines", "Venezuela (Bolivarian Republic of)", "Virgin Islands (British)", "Virgin Islands (U.S.)", "Viet Nam", "Vanuatu", "Wallis and Futuna", "Samoa", "Yemen", "Mayotte", "South Africa", "Zambia", "Zimbabwe" };
+        foreach (string o in countryArray)
+        {
+            <span>@o</span><br />
+        }*@
+
+
+
+    <!-- Page container -->
+    <div class="page-container">
+
+        <!-- Page content -->
+        <div class="page-content">
+
+            <!-- Main content -->
+            <div class="content-wrapper">
+
+                <!-- Advanced login -->
+                <form action="@Url.Action("PostLogin","Auth")" method="post" class="login-form">
+                    <div class="panel panel-body">
+
+
+                        <div style="color:@ViewBag.Color">
+                            @ViewBag.Message
+                        </div>
+
+                        <div class="text-center">
+                            <img src="~/Content/assets/images/login_cover.jpg" width="80" height="80" alt="">
+                            <h5 class="content-group-lg">Login To Your Account <small class="display-block">Enter your credentials</small></h5>
+                        </div>
+
+                        <div class="form-group has-feedback has-feedback-left">
+                            <input type="email" class="form-control" placeholder="Enter Email" required name="Email">
+                            <div class="form-control-feedback">
+                                <i class="icon-mail5 text-muted"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback has-feedback-left">
+                            <input type="password" class="form-control" placeholder="Password" required name="Password">
+                            <div class="form-control-feedback">
+                                <i class="icon-lock2 text-muted"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group login-options">
+                            <div class="row">
+                                @*<div class="col-sm-6">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" class="styled" checked="checked">
+                                            remember
+                                        </label>
+                                    </div>*@
+
+
+
+
+
+
+                                @*<div class="pull-right mr-10">
+                                        <a href="@Url.Action("ForgotPassword","Auth")">Forgot Password?</a>
+                                    </div>*@
+
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn bg-blue-400 btn-block">Login <i class="icon-arrow-right14 position-right"></i></button>
+                        </div>
+
+                        <a class="pull-right" href="@Url.Action("ForgotPassword","Auth")">Forgot Password?</a>
+                        <br />
+                        @*<div class="content-divider text-muted form-group"><span>or sign in with</span></div>
+                            <ul class="list-inline form-group list-inline-condensed text-center">
+                                <li><a href="#" class="btn border-indigo text-indigo btn-flat btn-icon btn-rounded"><i class="icon-facebook"></i></a></li>
+                                <li><a href="#" class="btn border-pink-300 text-pink-300 btn-flat btn-icon btn-rounded"><i class="icon-dribbble3"></i></a></li>
+                                <li><a href="#" class="btn border-slate-600 text-slate-600 btn-flat btn-icon btn-rounded"><i class="icon-github"></i></a></li>
+                                <li><a href="#" class="btn border-info text-info btn-flat btn-icon btn-rounded"><i class="icon-twitter"></i></a></li>
+                            </ul>*@
+
+                        <div class="content-divider text-muted form-group"><span>Don't have an account?</span></div>
+
+                        <a href="@Url.Action("Register","Auth")" class="btn bg-pink btn-block content-group">Sign up</a>
+
+                        @*<span class="help-block text-center no-margin">By continuing, you're confirming that you've read our <a href="#">Terms &amp; Conditions</a> and <a href="#">Cookie Policy</a></span>*@
+                    </div>
+                </form>
+                <!-- /advanced login -->
+
+            </div>
+            <!-- /main content -->
+
+        </div>
+        <!-- /page content -->
+
+    </div>
+    <!-- /page container -->
+
+</body>
+</html>

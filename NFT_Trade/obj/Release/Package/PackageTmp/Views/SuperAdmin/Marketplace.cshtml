@@ -1,0 +1,526 @@
+﻿@using PagedList.Mvc
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NFT LIB | Market Place</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="NODLAYS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="~/Content/images/favicon.ico" type="image/png" sizes="16x16">
+    <script type="text/javascript" src="~/Content/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <style type="text/css">
+        @@media only screen and (max-width : 768px) {
+            .imgsocial {
+                width: 20%;
+                height: auto;
+            }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container-fluid">
+            <a href="@Url.Action("CoinGecko","SuperAdmin")"><img src="~/Content/images/NFTLIB_logo_v3.png" width="140"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-md-3">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="font-size:large">Collections <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("Marketplace","SuperAdmin")" style="font-size:large">Marketplaces <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" action="@Url.Action("Collection","SuperAdmin")">
+                    <input list="searchValues" onkeyup="searchValue(this.value)" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <datalist id="searchValues" onchange="javascript:handleSearch(this)">
+                    </datalist>
+                    <button type="submit" id="searchBtn" class="btn btn-primary" hidden>Add <i class="icon-database-insert position-right"></i></button>
+
+                    @*<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>*@
+                    @*<a class="btn btn-outline-success my-2 my-sm-0" style="margin-left:12px" href="@Url.Action("Login","Auth")">Login</a>*@
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="border-bottom"></div>
+
+    @*Table For Auction*@
+    <div class="container-fluid pt-5 pb-3">
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table id="mytable" class="table table-bordred">
+                    <thead class="table-heading">
+                    <th></th>
+                    <th>#</th>
+                    <th>Logo</th>
+                    <th>Marketplace</th>
+                    <th>Link</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>1</td>
+                            <td><span><img src="~/Content/Logos/Opensea_NFT_Marketplace.png" width="25px" alt="Opensea NFT"></span></td>
+                            <td style="color: black;">Opensea</td>
+                            <td style="color: black;"><a href="https://opensea.io/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>2</td>
+                            <td><span><img src="~/Content/Logos/Binance_NFT_Marketplace.png" width="25px" alt="Binance NFT"></span></td>
+                            <td style="color: black;">Binance NFT</td>
+                            <td style="color: black;"><a href="https://www.binance.com/en/nft/home">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>3</td>
+                            <td><span><img src="~/Content/Logos/Crypto.com_NFT_Marketplace.png" width="25px" alt="Crypto.com NFT"></span></td>
+                            <td style="color: black;">Crypto.com NFT</td>
+                            <td style="color: black;"><a href="https://crypto.com/nft/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>4</td>
+                            <td><span><img src="~/Content/Logos/Orica_NFT_Marketplace.jpg" width="25px" alt="Orica"></span></td>
+                            <td style="color: black;">Orica</td>
+                            <td style="color: black;"><a href="https://orica.io/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>5</td>
+                            <td><span><img src="~/Content/Logos/Rarible_NFT_Marketplace.png" width="25px" alt="Rarible"></span></td>
+                            <td style="color: black;">Rarible</td>
+                            <td style="color: black;"><a href="https://rarible.com/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>6</td>
+                            <td><span><img src="~/Content/Logos/Superrare_NFT_Marketplace.jpg" width="25px" alt="Superrare NFT"></span></td>
+                            <td style="color: black;">Superrare</td>
+                            <td style="color: black;"><a href="https://superrare.com/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>7</td>
+                            <td><span><img src="~/Content/Logos/Foundation_NFT_Marketplace.jpg" width="25px" alt="Foundation NFT"></span></td>
+                            <td style="color: black;">Foundation</td>
+                            <td style="color: black;"><a href="https://foundation.app/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>8</td>
+                            <td><span><img src="~/Content/Logos/EnjinX_NFT_Marketplace.jpg" width="25px" alt="Enjinx NFT"></span></td>
+                            <td style="color: black;">Enjinx</td>
+                            <td style="color: black;"><a href="https://enjinx.io/eth/marketplace">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>9</td>
+                            <td><span><img src="~/Content/Logos/Airnft_NFT_Marketplace.jpg" width="25px" alt="Airnft NFT"></span></td>
+                            <td style="color: black;">Airnft</td>
+                            <td style="color: black;"><a href="https://www.airnfts.com/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>10</td>
+                            <td><span><img src="~/Content/Logos/Flipkick_NFT_Marketplace.png" width="25px" alt="Flipkick NFT"></span></td>
+                            <td style="color: black;">Flipkick</td>
+                            <td style="color: black;"><a href="https://www.flipkick.io/">Link</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>11</td>
+                            <td><span><img src="~/Content/Logos/Atomichub_NFT_Marketplace.jpg" width="25px" alt="Atomichub NFT"></span></td>
+                            <td style="color: black;">Atomichub</td>
+                            <td style="color: black;"><a href="https://wax.atomichub.io/market">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>12</td>
+                            <td><span><img src="~/Content/Logos/Knownorigin_ NFT_Marketplace.jpg" width="25px" alt="Knownorigin NFT"></span></td>
+                            <td style="color: black;">Knownorigin</td>
+                            <td style="color: black;"><a href="https://knownorigin.io/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>13</td>
+                            <td><span><img src="~/Content/Logos/Treasureland_NFT_Marketplace.png" width="25px" alt="Treasureland NFT"></span></td>
+                            <td style="color: black;">Treasureland</td>
+                            <td style="color: black;"><a href="https://treasureland.market/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>14</td>
+                            <td><span><img src="~/Content/Logos/Showroom_NFT_Marketplace.jpg" width="25px" alt="NFTShowroom"></span></td>
+                            <td style="color: black;">NFTShowroom</td>
+                            <td style="color: black;"><a href="https://nftshowroom.com/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>15</td>
+                            <td><span><img src="~/Content/Logos/NFTB_NFT_Marketplace.jpg" width="25px" alt="NFTb NFT"></span></td>
+                            <td style="color: black;">NFTb</td>
+                            <td style="color: black;"><a href="https://nftb.io/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>16</td>
+                            <td><span><img src="~/Content/Logos/NFTrade_NFT_Marketplace.jpg" width="25px" alt="NFTrade NFT"></span></td>
+                            <td style="color: black;">NFTrade</td>
+                            <td style="color: black;"><a href="https://nftrade.com/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>17</td>
+                            <td><span><img src="~/Content/Logos/NFTHive_NFT_Marketplace.jpg" width="25px" alt="NFThive NFT"></span></td>
+                            <td style="color: black;">NFThive</td>
+                            <td style="color: black;"><a href="https://nfthive.io/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>18</td>
+                            <td><span><img src="~/Content/Logos/Makersplace_NFT_Marketplace.jpg" width="25px" alt="Makersplace NFT"></span></td>
+                            <td style="color: black;">Makersplace</td>
+                            <td style="color: black;"><a href="https://makersplace.com/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>19</td>
+                            <td><span><img src="~/Content/Logos/Niftygateway_NFT_Marketplace.jpg" width="25px" alt="Niftygiveaway NFT"></span></td>
+                            <td style="color: black;">Niftygiveaway</td>
+                            <td style="color: black;"><a href="https://niftygateway.com/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>20</td>
+                            <td><span><img src="~/Content/Logos/Bakeryswap_NFT_Marketplace.jpg" width="25px" alt="Bakeryswap NFT"></span></td>
+                            <td style="color: black;">Bakeryswap</td>
+                            <td style="color: black;"><a href="https://www.bakeryswap.org/#/home">Link</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>21</td>
+                            <td><span><img src="~/Content/Logos/Solanart_NFT_Marketplace.png" width="25px" alt="Solanart NFT"></span></td>
+                            <td style="color: black;">Solanart</td>
+                            <td style="color: black;"><a href="https://solanart.io/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>22</td>
+                            <td><span><img src="~/Content/Logos/Sorare_NFT_Marketplace.png" width="25px" alt="Sorare NFT"></span></td>
+                            <td style="color: black;">Sorare</td>
+                            <td style="color: black;"><a href="https://sorare.com/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>23</td>
+                            <td><span><img src="~/Content/Logos/Wazirx_NFT_Marketplace.jpg" width="25px" alt="Wazirx NFT"></span></td>
+                            <td style="color: black;">Wazirx</td>
+                            <td style="color: black;"><a href="https://nft.wazirx.org/drop">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>24</td>
+                            <td><span><img src="~/Content/Logos/Rocki_NFT_Marketplace.png" width="25px" alt="Rocki NFT"></span></td>
+                            <td style="color: black;">Rocki</td>
+                            <td style="color: black;"><a href="https://rocki.app/nft">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>25</td>
+                            <td><span><img src="~/Content/Logos/asyncart_NFT_Marketplace.jpg" width="25px" alt="Async Art NFT"></span></td>
+                            <td style="color: black;">Async Art</td>
+                            <td style="color: black;"><a href="https://async.art/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>26</td>
+                            <td><span><img src="~/Content/Logos/Venly_NFT_Marketplace.jpg" width="25px" alt="Venly NFT"></span></td>
+                            <td style="color: black;">Venly</td>
+                            <td style="color: black;"><a href="https://venly.market/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>27</td>
+                            <td><span><img src="~/Content/Logos/Portion_NFT_Marketplace.jpg" width="25px" alt="Portion NFT"></span></td>
+                            <td style="color: black;">Portion</td>
+                            <td style="color: black;"><a href="https://portion.io/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>28</td>
+                            <td><span><img src="~/Content/Logos/Zora_NFT_Marketplace.jpg" width="25px" alt="Zora NFT"></span></td>
+                            <td style="color: black;">Zora</td>
+                            <td style="color: black;"><a href="https://zora.co/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>29</td>
+                            <td><span><img src="~/Content/Logos/Mintable_NFT_Marketplace.jpg" width="25px" alt="Mintable NFT"></span></td>
+                            <td style="color: black;">Mintable</td>
+                            <td style="color: black;"><a href="https://mintable.app/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>30</td>
+                            <td><span><img src="~/Content/Logos/Ghostmarket_NFT_Marketplace.jpg" width="25px" alt="Ghostmarket NFT"></span></td>
+                            <td style="color: black;">Ghostmarket</td>
+                            <td style="color: black;"><a href="https://ghostmarket.io/">Link</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>31</td>
+                            <td><span><img src="~/Content/Logos/Myth.Market_NFT_Marketplace.png" width="25px" alt="Myth.Market NFT"></span></td>
+                            <td style="color: black;">Myth.Market</td>
+                            <td style="color: black;"><a href="https://myth.market/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>32</td>
+                            <td><span><img src="~/Content/Logos/Viv3_NFT_Marketplace.jpg" width="25px" alt="Viv3 NFT"></span></td>
+                            <td style="color: black;">Viv3</td>
+                            <td style="color: black;"><a href="https://viv3.com/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>33</td>
+                            <td><span><img src="~/Content/Logos/hicetnunc_NFT_Marketplace.jpg" width="25px" alt="hic et nunc NFT"></span></td>
+                            <td style="color: black;">hic et nunc</td>
+                            <td style="color: black;"><a href="https://www.hicetnunc.xyz/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>34</td>
+                            <td><span><img src="~/Content/Logos/SturdyExchange_NFT_Marketplace.jpg" width="25px" alt="Sturdy Exchange NFT"></span></td>
+                            <td style="color: black;">Sturdy Exchange</td>
+                            <td style="color: black;"><a href="https://sturdy.exchange/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>35</td>
+                            <td><span><img src="~/Content/Logos/Valor Prime_NFT_Marketplace.png" width="25px" alt="Valor Prime NFT"></span></td>
+                            <td style="color: black;">Valor Prime</td>
+                            <td style="color: black;"><a href="https://valorprime.com/en/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>36</td>
+                            <td><span><img src="~/Content/Logos/Artblocks_NFT_Marketplace.jpg" width="25px" alt="ArtBlocks NFT"></span></td>
+                            <td style="color: black;">ArtBlocks</td>
+                            <td style="color: black;"><a href="https://artblocks.io/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>37</td>
+                            <td><span><img src="~/Content/Logos/NFTONE_Marketplace_NFT.png" width="25px" alt="v NFT"></span></td>
+                            <td style="color: black;">NFT One</td>
+                            <td style="color: black;"><a href="https://nftone.net/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>38</td>
+                            <td><span><img src="~/Content/Logos/Waxstash_NFT_Marketplace.png" width="25px" alt="Waxstash NFT"></span></td>
+                            <td style="color: black;">Waxstash</td>
+                            <td style="color: black;"><a href="https://www.waxstash.com/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>39</td>
+                            <td><span><img src="~/Content/Logos/NFTically_Marketplace_NFT.jpg" width="25px" alt="NFTically NFT"></span></td>
+                            <td style="color: black;">NFTically</td>
+                            <td style="color: black;"><a href="https://www.nftically.com/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>40</td>
+                            <td><span><img src="~/Content/Logos/Cargo_NFT_Marketplace.png" width="25px" alt="Cargo NFT"></span></td>
+                            <td style="color: black;">Cargo</td>
+                            <td style="color: black;"><a href="https://app.cargo.build/">Link</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href=""><i class="bi bi-star"></i></a></td>
+                            <td>41</td>
+                            <td><span><img src="~/Content/Logos/Blockparty_NFT_Marketplace.jpg" width="25px" alt="Blockparty NFT"></span></td>
+                            <td style="color: black;">Blockparty</td>
+                            <td style="color: black;"><a href="https://blockparty.co/marketplace">Link</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidedisc alert alert-warning alert-dismissible fade show" role="alert">
+        <strong style="font-size:12px;"><i class="fa fa-exclamation-triangle fa-lg"></i> <u>IMPORTANT DISCLAIMER:</u></strong>
+        <span style="font-size:13px;">All information provided on our website, social media pages and other platforms is for general information only and it’s procured from third party sources. We offer no warranty for the content provided regarding accuracy. The content we provide is in no way financial advice or legal advice. NFT’s are a highly risky investing vehicle and you should consult a financial advisor before making any decision. No content on our website is meant to be a solicitation or offer; all the content is for information only.</span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <!--Footer STARTS -->
+    <footer class="page-footer font-small indigo pt-3">
+        <!-- Footer Links -->
+        <div class="container-fluid text-md-left">
+            <!-- Grid row -->
+            <div class="row row-cols-12 mx-1">
+                <!-- Grid column -->
+                <div class="col mx-auto">
+                    <img class="pb-3" src="~/Content/images/NFTLIB_logo_v3.png" width="170px">
+                    <p style="font-size:17px; font-weight:500;">Nftlib provides a fundamental analysis of the NFT market. We are tracking all key indicators necessary for users to learn about any collection.</p>
+                </div>
+
+                <div class="col mx-auto text-md-left d-flex justify-content-center" style="text-align: center;">
+
+                    <!-- Links -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="~/Content/images/fb.png" width="50px"></a></span>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="~/Content/images/insta.png" width="50px"></a></span>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="~/Content/images/linkedin.png" width="50px"></a></span>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="~/Content/images/twitter.png" width="50px"></a></span>
+                        </li>
+
+                        <li>
+                            <div class="row pt-md-5 pt-5">
+                                <div class="col-md-6"><span class="px-md-3"><a href="@Url.Action("Contact","SuperAdmin")"><font color="#480a25">Contact</font></a></span></div>
+                                <div class="col-md-6"><span class="px-md-3"><a href=""><font color="#480a25">Disclaimer</font></a></span></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="row">
+                                <div class="col-md-6"><span class="px-md-3"><a href="@Url.Action("About","SuperAdmin")"><font color="#480a25">About us</font></a></span></div>
+                                <div class="col-md-6"><span class="px-md-3"><a href=""><font color="#480a25">Terms of service</font></a></span></div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col mx-auto text-md-left" style="text-align: center;" ">
+
+                    <!-- Links -->
+                    <h5 class="font-weight-bold mb-4 footer-heading">Stay up to date</h5>
+                    <p style="font-size:17px; font-weight:500;">Get the latest updates from us regarding new collections tracked, analytics and upcoming features (we won't spam you with promotional material).</p>
+
+                    <ul class="list-unstyled">
+                        <form class="mt-2" action="@Url.Action("Newsletter","SuperAdmin")" method="post">
+                            <div class="input-group">
+                                <div class="col-md-12 pl-0 pb-2">
+                                    <input type="email" class="form-control" placeholder="email@gmail.com">
+                                </div>
+
+                                <div class="col-md-12 pt-md-0 pl-0 pt-3">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="submit">Subscribe now</button>
+                                    </span>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </form>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+
+        <div class="container text-center py-4">
+            <div class="row">
+                <div class="col-md-12">
+                    ©2021 nftlib. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+
+        <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fa fa-arrow-up" style="color:#1396fe;"></i></a>
+    </footer>
+    <!--Footer ENDS -->
+
+    <script type="text/javascript">
+
+        function searchValue(key) {
+            if (key != "") {
+                $.ajax({
+                    type: 'Post',
+                    url: "../SuperAdmin/GetSearchValues",
+                    dataType: "json",
+                    data: {
+                        key: key
+                    },
+                    success: function (response) {
+                        $('#searchValues').empty();
+                        var i = 0;
+                        $.each(response, function () {
+                            $('#searchValues').append('<option value="' + response[i] + '">' + response[i] + '</option>');
+                            i++;
+                        });
+                    },
+                    error: function () {
+                        // alert("Search ajax Failed");
+                    }
+                });
+            }
+        }
+
+        function handleSearch(elm) {
+            alert("hi");
+            var elmval = elm.value;
+            $('#searchBtn').click();
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            // scroll body to 0px on click
+            $('#back-to-top').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 400);
+                return false;
+            });
+        });
+    </script>
+
+</body>
+</html>

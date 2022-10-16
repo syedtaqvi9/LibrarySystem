@@ -1,0 +1,1027 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NFT LIB | COIN RATES</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="NODLAYS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="~/Content/images/favicon.ico" type="image/png" sizes="16x16">
+    <script type="text/javascript" src="~/Content/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container-fluid">
+            <a href="index.html"><img src="images/logo.png" width="140px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-md-3">
+                    <!--       <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                          </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Coins
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Exchanges
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            DeFi
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            NFT
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Portfolio
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Publications
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Resources
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Products
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Community
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <!--       <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                          </li> -->
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <style type="text/css">
+        .container-fluid {
+            width: 100%;
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .box {
+            transition: box-shadow .3s;
+        }
+
+            .box:hover {
+                box-shadow: 0 0 11px rgba(33,33,33,.2);
+            }
+    </style>
+
+    <div class="container-fluid">
+        <div class="fb-profile">
+            <img align="center" class="fb-image-lg fb-image-sm" src="images/unnamed.png" alt="Profile image example" />
+            <!--         <img class="fb-image-profile thumbnail" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example" style="border-radius:200px" />
+                    <img class="badge1" src="images/badge.png" width="40px" style="margin-left:-60px" />
+                    <h1 align="center"><b>CyberArt</b></h1>
+                    <p align="center">Last updated: October 20th, 2021 at 7:10 PM</p> -->
+        </div>
+    </div>
+
+    <style type="text/css">
+        .mobbadge {
+            width: 40px;
+        }
+    </style>
+
+    <div class="container pt-2">
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="d-flex justify-content-center pb-4">
+                    <img class="" src="http://lorempixel.com/180/180/people/9/" alt="Profile image example" style="border-radius:200px" />
+                    <img class="badge1 mobbadge" src="images/badge.png" width="40px" style="margin-left:-60px; padding-top: 140px;" />
+                </div>
+
+                <div class="px-4 py-3" style="border-width:2px; border-style:solid; border-radius:50px; border-color:#e5e5e5;">
+                    <p>
+                        The Bored Ape Yacht Club is a collection of 10,000
+                        unique Bored Ape NFTs— unique digital
+                        collectibles living on the Ethereum blockchain.
+                        Your Bored Ape doubles as your Yacht Club
+                        membership card, and grants access to membersonly benefits, the first of which is access to THE
+                        BATHROOM, a collaborative graffiti board. Future
+                        areas and perks can be unlocked by the
+                        community through roadmap activation.
+                    </p>
+                    <h5 style="font-weight: 600">Created: 04/22/2021</h5>
+                </div>
+
+                <div class="d-flex justify-content-center py-3">
+
+                    <!-- Dribbble -->
+                    <i class="fab fa-dribbble fa-2x pr-3" style="color:#808080;"></i>
+
+                    <!-- Instagram -->
+                    <i class="fab fa-instagram fa-2x pr-3" style="color:#808080;"></i>
+
+                    <!-- Twitter -->
+                    <i class="fab fa-twitter fa-2x pr-3" style="color:#808080;"></i>
+
+                    <!-- Dsicord -->
+                    <i class="fab fa-discord fa-2x" style="color:#808080;"></i>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-8">
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="hidecopy">
+                            <h1 class="pb-2" align="center">Bored Ape Yacht Club</h1>
+                            <div class="d-flex justify-content-center">
+                                <span style="border-width:2px; border-style:solid; border-radius:10px; padding:9px 16px 9px 16px; border-color:#e5e5e5;">
+                                    <img style="display: inline-block; width: 30px;" src="images/2.png">
+                                    <h5 class="px-2" style="display: inline-block; vertical-align: -webkit-baseline-middle;">0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D</h5>
+                                    <button style="padding-left: 0px; padding-right: 0px;" type="button" class="btn btn-default btn-copy js-tooltip js-copy" data-toggle="tooltip" data-placement="bottom" data-copy="0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D" title="Copy to clipboard">
+                                        <!-- icon from google's material design library -->
+                                        <span class="icon" style="background-color:#f7f7f7; padding:6px 8px 6px 8px; border-radius: 150px">
+                                            <i style="display: inline-block;" class="fa fa-copy"></i>
+                                        </span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="px-3 d-flex justify-content-center py-4">
+                            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                                <div class="btn-group mr-2" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-primary active">24h</button>
+                                    <button type="button" class="btn btn-primary">7d</button>
+                                    <button type="button" class="btn btn-primary">30d</button>
+                                    <button type="button" class="btn btn-primary">All Time</button>
+                                </div>
+                            </div>
+                        </span>
+
+                        <style type="text/css">
+                            @@media (max-width:768px) {
+
+                                .border-right {
+                                    border-right: 0px !important;
+                                }
+                            }
+                        </style>
+
+                        <div class="row px-4 py-3 mx-4" style="border-width:2px; border-style:solid; border-radius:50px; border-color:#e5e5e5;">
+
+                            <div class="col-md-4 border-right" style="border-right: 1px solid; border-color:#e5e5e5;">
+                                <h4 align="center" style="font-weight:700;">Volume (24h)</h4>
+                                <div class="d-flex justify-content-center">
+                                    <img style="display: inline-block; width: 30px;" src="images/2.png">
+                                    <h5 class="px-2" style="display: inline-block; vertical-align: -webkit-baseline-middle;">201.13</h5>
+                                </div>
+
+                                <h4 class="pt-4" align="center" style="font-weight:700;">Market Cap</h4>
+                                <div class="d-flex justify-content-center">
+                                    <img style="display: inline-block; width: 30px;" src="images/2.png">
+                                    <h5 class="px-2" style="display: inline-block; vertical-align: -webkit-baseline-middle;">201.13</h5>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 pt-md-0 pt-5 border-right" style="border-right: 1px solid; border-color:#e5e5e5;">
+                                <h4 align="center" style="font-weight:700;">Average Price (24h) </h4>
+                                <div class="d-flex justify-content-center">
+                                    <img style="display: inline-block; width: 30px;" src="images/2.png">
+                                    <h5 class="px-2" style="display: inline-block; vertical-align: -webkit-baseline-middle;">201.13</h5>
+                                </div>
+
+                                <h4 class="pt-4" align="center" style="font-weight:700;">Floor Price</h4>
+                                <div class="d-flex justify-content-center">
+                                    <img style="display: inline-block; width: 30px;" src="images/2.png">
+                                    <h5 class="px-2" style="display: inline-block; vertical-align: -webkit-baseline-middle;">201.13</h5>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4  pt-md-0 pt-4">
+                                <h4 align="center" style="font-weight:700;">Sales (24h)</h4>
+                                <div class="d-flex justify-content-center">
+                                    <h5 class="px-2" style="display: inline-block; vertical-align: -webkit-baseline-middle;">201.13</h5>
+                                </div>
+
+                                <h4 class="pt-4" align="center" style="font-weight:700;">
+                                    Items
+                                </h4>
+                                <div class="d-flex justify-content-center">
+                                    <h5 class="px-2" style="display: inline-block; vertical-align: -webkit-baseline-middle;">201.13</h5>
+                                </div>
+
+                                <h4 class="pt-4" align="center" style="font-weight:700;">
+                                    Owners
+                                </h4>
+                                <div class="d-flex justify-content-center">
+                                    <h5 class="px-2" style="display: inline-block; vertical-align: -webkit-baseline-middle;">201.13</h5>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <style type="text/css">
+                            .icon {
+                                width: 16px;
+                                height: 16px;
+                                padding: 0;
+                                margin: 0;
+                                vertical-align: middle;
+                            }
+                        </style>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+        // COPY TO CLIPBOARD
+        // Attempts to use .execCommand('copy') on a created text field
+        // Falls back to a selectable alert if not supported
+        // Attempts to display status in Bootstrap tooltip
+        // ------------------------------------------------------------------------------
+
+        function copyToClipboard(text, el) {
+            var copyTest = document.queryCommandSupported('copy');
+            var elOriginalText = el.attr('data-original-title');
+
+            if (copyTest === true) {
+                var copyTextArea = document.createElement("textarea");
+                copyTextArea.value = text;
+                document.body.appendChild(copyTextArea);
+                copyTextArea.select();
+                try {
+                    var successful = document.execCommand('copy');
+                    var msg = successful ? 'Copied!' : 'Whoops, not copied!';
+                    el.attr('data-original-title', msg).tooltip('show');
+                } catch (err) {
+                    console.log('Oops, unable to copy');
+                }
+                document.body.removeChild(copyTextArea);
+                el.attr('data-original-title', elOriginalText);
+            } else {
+                // Fallback if browser doesn't support .execCommand('copy')
+                window.prompt("Copy to clipboard: Ctrl+C or Command+C, Enter", text);
+            }
+        }
+
+        $(document).ready(function () {
+            // Initialize
+            // ---------------------------------------------------------------------
+
+            // Tooltips
+            // Requires Bootstrap 3 for functionality
+            $('.js-tooltip').tooltip();
+
+            // Copy to clipboard
+            // Grab any text in the attribute 'data-copy' and pass it to the
+            // copy function
+            $('.js-copy').click(function () {
+                var text = $(this).attr('data-copy');
+                var el = $(this);
+                copyToClipboard(text, el);
+            });
+        });
+    </script>
+
+
+
+    <!-- <div class="container card pt-3 d-flex justify-content-center">
+           <div class="row">
+             <div class="col-3">
+              <h4 align="center"><b>38</b></h4>
+              <p align="center">items</p>
+             </div>
+             <div class="col-3">
+              <h4 align="center"><b>54</b></h4>
+              <p align="center">owners</p>
+             </div>
+             <div class="col-3">
+              <h4 align="center"><b>0.044</b></h4>
+              <p align="center">floor price</p>
+             </div>
+             <div class="col-3">
+              <h4 align="center"><b>29.2</b></h4>
+              <p align="center">volume traded</p>
+             </div>
+           </div>
+    </div>  -->
+
+    <style type="text/css">
+
+        .iconh:active {
+            color: pink;
+        }
+
+        .iconh:hover {
+            color: #627eea
+        }
+
+        @@media (max-width:768px) {
+
+            .hidecopy {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- <hr width="100%">
+    <div class="container">
+        <div class="row">
+            <div class="col"><i class="far fa-sliders-h" style="vertical-align: middle; font-size:25px; color:#737372;"></i><span class="pl-3" style="vertical-align: middle; font-size:22px; font-weight:700; color:#646363;">Filters</span></div>
+
+            <div class="col"><i class="fas fa-caret-down" style="vertical-align: middle; font-size:25px; color:#737372;"></i><span class="pl-3" style="vertical-align: middle; font-size:22px; font-weight:700; color:#646363;">Sort</span></div>
+
+            <div class="col">
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search by ID" aria-label="Search">
+              </form>
+            </div>
+
+            <div class="col">
+              <a href="#" class="iconh"><i class="fas fa-th" style="vertical-align: middle; font-size:25px; "></i><span class="pl-3" style="vertical-align: middle; font-size:22px; font-weight:700; ">Collection</span></a>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+              <i class="fas fa-analytics" style="vertical-align: middle; font-size:25px; color:#737372;"></i><span class="pl-3" style="vertical-align: middle; font-size:22px; font-weight:700; color:#646363;">Analytics</span>
+            </div>
+        </div>
+    </div>
+    <hr width="100%"> -->
+    <!-- <div class="container-fluid px-5">
+      <div class="row">
+
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="images/im1.jpg" alt="Card image cap">
+              <div class="card-body">
+
+                  <div class="row">
+                        <div class="col-md-12">
+                          <p class="card-title">Bored Ape Yacht Club <img src="images/badge.png" width="18px" style="padding-bottom:5px;" /></p>
+                        </div>
+
+                        <div class="col-md-8">
+                          <p class="card-title">Last: <img src="images/2.png" width="20px"> <span><b>83.45</b></span></p>
+                          <p class="card-title">Best Offer: <img src="images/2.png" width="20px"> <span><b>61.45</b></span></p>
+                        </div>
+
+                        <div class="col-md-4">
+                          <p class="card-title">ID <span><b>2087</b></span></p>
+                        </div>
+                        <div class="col-md-12">
+                          <button class="btn btn-primary" style="width: 100%">Rarity Score: 387</button>
+                        </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="images/im1.jpg" alt="Card image cap">
+              <div class="card-body">
+
+                  <div class="row">
+                        <div class="col-md-12">
+                          <p class="card-title">Bored Ape Yacht Club <img src="images/badge.png" width="18px" style="padding-bottom:5px;" /></p>
+                        </div>
+
+                        <div class="col-md-8">
+                          <p class="card-title">Last: <img src="images/2.png" width="20px"> <span><b>83.45</b></span></p>
+                          <p class="card-title">Best Offer: <img src="images/2.png" width="20px"> <span><b>61.45</b></span></p>
+                        </div>
+
+                        <div class="col-md-4">
+                          <p class="card-title">ID <span><b>2087</b></span></p>
+                        </div>
+                        <div class="col-md-12">
+                          <button class="btn btn-primary" style="width: 100%">Rarity Score: 387</button>
+                        </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="images/im1.jpg" alt="Card image cap">
+              <div class="card-body">
+
+                  <div class="row">
+                        <div class="col-md-12">
+                          <p class="card-title">Bored Ape Yacht Club <img src="images/badge.png" width="18px" style="padding-bottom:5px;" /></p>
+                        </div>
+
+                        <div class="col-md-8">
+                          <p class="card-title">Last: <img src="images/2.png" width="20px"> <span><b>83.45</b></span></p>
+                          <p class="card-title">Best Offer: <img src="images/2.png" width="20px"> <span><b>61.45</b></span></p>
+                        </div>
+
+                        <div class="col-md-4">
+                          <p class="card-title">ID <span><b>2087</b></span></p>
+                        </div>
+                        <div class="col-md-12">
+                          <button class="btn btn-primary" style="width: 100%">Rarity Score: 387</button>
+                        </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="images/im1.jpg" alt="Card image cap">
+              <div class="card-body">
+
+                  <div class="row">
+                        <div class="col-md-12">
+                          <p class="card-title">Bored Ape Yacht Club <img src="images/badge.png" width="18px" style="padding-bottom:5px;" /></p>
+                        </div>
+
+                        <div class="col-md-8">
+                          <p class="card-title">Last: <img src="images/2.png" width="20px"> <span><b>83.45</b></span></p>
+                          <p class="card-title">Best Offer: <img src="images/2.png" width="20px"> <span><b>61.45</b></span></p>
+                        </div>
+
+                        <div class="col-md-4">
+                          <p class="card-title">ID <span><b>2087</b></span></p>
+                        </div>
+                        <div class="col-md-12">
+                          <button class="btn btn-primary" style="width: 100%">Rarity Score: 387</button>
+                        </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div> -->
+    <!-- <div class="container pt-3 d-flex justify-content-center">
+           <div class="row">
+
+             <div class="col-md-3 col-6">
+              <div class="card box" style="width: 10rem;">
+                <div class="card-body">
+                  <span>
+                   <h4 align="center" class="card-title"><b>38</b></h4>
+                  </span>
+                  <p align="center" class="card-text">items</p>
+                </div>
+              </div>
+             </div>
+
+             <div class="col-md-3 col-6">
+              <div class="card box" style="width: 10rem;">
+                <div class="card-body">
+                  <h4 align="center" class="card-title"><b>54</b></h4>
+                  <p align="center" class="card-text">owners</p>
+                </div>
+              </div>
+             </div>
+
+             <div class="col-md-3 col-6 mt-2 mt-md-0">
+              <div class="card box" style="width: 10rem;">
+                <div class="card-body">
+                  <h4 align="center" class="card-title"><img src="images/eth.png" width="14px" style="padding-bottom:5px;"><b class="pl-2">0.044</b></h4>
+                  <p align="center" class="card-text">floor price</p>
+                </div>
+              </div>
+             </div>
+             <div class="col-md-3 col-6 mt-2 mt-md-0">
+              <div class="card box" style="width: 10rem;">
+                <div class="card-body">
+                  <h4 align="center" class="card-title"><img src="images/eth.png" width="14px" style="padding-bottom:5px;"><b class="pl-2">29.2</b></h4>
+                  <p align="center" class="card-text">volume traded</p>
+                </div>
+              </div>
+           </div>
+
+           </div>
+    </div>
+
+    <div class="container pt-3 d-flex justify-content-center">
+      <h6 align="center">Digital Cyber Art.</h6>
+    </div> -->
+    <!-- <div>
+        <style scoped>
+            @@import "css/styles.css";
+        </style>
+    </div> -->
+    <!-- <div id="myspecialdiv">
+      <iframe width="100%" height="700px" scrolling="no" frameborder="0" src="testing.html" style="overflow: hidden;"></iframe>
+    </div> -->
+    <!-- COLLECTIONS -->
+
+    <div class="container-fluid pt-4 pb-5" style="overflow-x: hidden;">
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light"><i class="fa fa-filter pr-2"></i>Filters</div>
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">
+                        <b>Status</b>
+                        <div class="row pt-2">
+                            <div class="col-md-6 col-6">
+                                <button type="button" class="btn btn-light">Buy Now</button>
+                            </div>
+                            <div class="col-md-6 col-6">
+                                <button type="button" class="btn btn-light">Auction</button>
+                            </div>
+
+                            <div class="col-md-6 col-6 pt-2">
+                                <button type="button" class="btn btn-light">New</button>
+                            </div>
+                            <div class="col-md-6 col-6 pt-2">
+                                <button type="button" class="btn btn-light">Offers</button>
+                            </div>
+
+                        </div>
+                    </a>
+
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">
+                        <b>Price</b>
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>United States Dollar (USD)</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+
+                        <div class="pt-3">
+                            <label for="price-max">Min:</label>
+                            <input type="range" name="range" step="50000" min="100000" max="1000000" value="" onchange="rangePrimary1.value=value">
+                            <input class="w-100" type="text" id="rangePrimary1" />
+                            <br><br>
+                            <label for="price-max">Max:</label>
+                            <input type="range" name="range" step="50000" min="100000" max="1000000" value="" onchange="rangePrimary2.value=value">
+                            <input class="w-100" type="text" id="rangePrimary2" />
+
+                            <input class="btn btn-primary w-100 mt-3" type="submit" data-inline="true" value="Apply">
+                        </div>
+                    </a>
+
+
+
+
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><b>Chains</b></a>
+
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><b>On Sale In</b></a>
+
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            <div class="col-md-2">
+                                <button class="btn btn-primary" id="sidebarToggle"><i class="fa fa-bars"></i></button>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container">
+
+                    <div class="row pt-3">
+
+                        <div class="col-md-2 col-6">
+                            <!--     <i class="fas fa-caret-down" style="vertical-align: middle; font-size:25px; color:#737372;"></i><span class="pl-3" style="vertical-align: middle; font-size:22px; font-weight:700; color:#646363;">Sort</span> -->
+
+                            <div class="form-group">
+                                <select class="form-select form-select-md" aria-label=".form-select-sm example" id="status" name="status" required>
+                                    <option><b>Sort</b></option>
+                                    <option><b>All Items</b></option>
+                                    <option><b>Bundles</b></option></option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-6">
+                            <form class="">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search by ID" aria-label="Search">
+                            </form>
+                        </div>
+
+
+                        <div class="col-md-2 col-6 d-flex justify-content-center">
+                            <a href="#" class="iconh"><i class="fas fa-th" style="vertical-align:middle; font-size:25px; "></i><span class="pl-3" style="vertical-align: middle; font-size:22px; font-weight:700; ">Collection</span></a>
+                        </div>
+
+                        <div class="col-md-2 col-6 d-flex justify-content-center">
+                            <i class="fas fa-analytics" style="vertical-align: middle; font-size:25px; color:#737372;"></i><span class="pl-3" style="vertical-align: middle; font-size:22px; font-weight:700; color:#646363;">Analytics</span>
+                        </div>
+
+                    </div>
+
+                    <div class="row pt-3">
+                        <hr width="100%">
+
+                        <div class="col-md-3 d-flex justify-content-center">
+                            <div class="card" style="width: 16rem;">
+                                <img class="card-img-top" src="images/im1.jpg" alt="Card image cap">
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="card-title">Bored Ape Yacht Club <img src="images/badge.png" width="18px" style="padding-bottom:5px;" /></p>
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            <p class="card-title">Last: <img src="images/2.png" width="20px"> <span><b>83.45</b></span></p>
+                                            <p class="card-title">Best Offer: <img src="images/2.png" width="20px"> <span><b>61.45</b></span></p>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <p class="card-title">ID <span><b>2087</b></span></p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-primary" style="width: 100%">Rarity Score: 387</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 d-flex justify-content-center pt-md-0 pt-3">
+                            <div class="card" style="width: 16rem;">
+                                <img class="card-img-top" src="images/im1.jpg" alt="Card image cap">
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="card-title">Bored Ape Yacht Club <img src="images/badge.png" width="18px" style="padding-bottom:5px;" /></p>
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            <p class="card-title">Last: <img src="images/2.png" width="20px"> <span><b>83.45</b></span></p>
+                                            <p class="card-title">Best Offer: <img src="images/2.png" width="20px"> <span><b>61.45</b></span></p>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <p class="card-title">ID <span><b>2087</b></span></p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-primary" style="width: 100%">Rarity Score: 387</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 d-flex justify-content-center pt-md-0 pt-3">
+                            <div class="card" style="width: 16rem;">
+                                <img class="card-img-top" src="images/im1.jpg" alt="Card image cap">
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="card-title">Bored Ape Yacht Club <img src="images/badge.png" width="18px" style="padding-bottom:5px;" /></p>
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            <p class="card-title">Last: <img src="images/2.png" width="20px"> <span><b>83.45</b></span></p>
+                                            <p class="card-title">Best Offer: <img src="images/2.png" width="20px"> <span><b>61.45</b></span></p>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <p class="card-title">ID <span><b>2087</b></span></p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-primary" style="width: 100%">Rarity Score: 387</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 d-flex justify-content-center pt-md-0 pt-3">
+                            <div class="card" style="width: 16rem;">
+                                <img class="card-img-top" src="images/im1.jpg" alt="Card image cap">
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <p class="card-title">Bored Ape Yacht Club <img src="images/badge.png" width="18px" style="padding-bottom:5px;" /></p>
+                                        </div>
+
+                                        <div class="col-md-8">
+                                            <p class="card-title">Last: <img src="images/2.png" width="20px"> <span><b>83.45</b></span></p>
+                                            <p class="card-title">Best Offer: <img src="images/2.png" width="20px"> <span><b>61.45</b></span></p>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <p class="card-title">ID <span><b>2087</b></span></p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <button class="btn btn-primary" style="width: 100%">Rarity Score: 387</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 d-flex justify-content-center">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong style="font-size:12px;"><i class="fa fa-exclamation-triangle fa-lg"></i> <u>IMPORTANT DISCLAIMER:</u></strong>
+        <span style="font-size:13px;">All content provided herein our website, hyperlinked sites, associated applications, forums, blogs, social media accounts and other platforms (“Site”) is for your general information only, procured from third party sources. We make no warranties of any kind in relation to our content, including but not limited to accuracy and updatedness. No part of the content that we provide constitutes financial advice, legal advice or any other form of advice meant for your specific reliance for any purpose. Any use or reliance on our content is solely at your own risk and discretion. You should conduct your own research, review, analyse and verify our content before relying on them. Trading is a highly risky activity that can lead to major losses, please therefore consult your financial advisor before making any decision. No content on our Site is meant to be a solicitation or offer.</span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+
+    <style type="text/css">
+        a {
+            text-decoration: none !important;
+        }
+    </style>
+
+
+
+    <!-- NEW Footer STARTS -->
+    <footer class="page-footer font-small indigo pt-3">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-md-left">
+
+            <!--    <div class="row mx-3 my-5 justify-content-center justify-content-md-start">
+                  <img src="images/logo.png" width="140px">
+                </div> -->
+            <!-- Grid row -->
+            <div class="row row-cols-12 mx-1">
+
+                <!-- Grid column -->
+
+
+                <div class="col mx-auto">
+                    <img class="pb-3" src="images/logonft.png" width="170">
+                    <p style="font-size:17px; font-weight:500;">Nftlib provides a fundamental analysis of the NFT market. We are tracking all key indicators necessary for users to learn about any collection.</p>
+                </div>
+
+                <style type="text/css">
+                    @@media only screen and (max-width : 768px) {
+                        .imgsocial {
+                            width: 20%;
+                            height: auto;
+                        }
+                    }
+
+                    .back-to-top {
+                        position: fixed;
+                        bottom: 25px;
+                        right: 25px;
+                        display: none;
+                    }
+                </style>
+
+
+                <div class="col mx-auto text-md-left d-flex justify-content-center" style="text-align: center;">
+
+                    <!-- Links -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="images/fb.png" width="50px"></a></span>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="images/insta.png" width="50px"></a></span>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="images/linkedin.png" width="50px"></a></span>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="images/twitter.png" width="50px"></a></span>
+                        </li>
+
+                        <li>
+                            <div class="row pt-md-5 pt-5">
+                                <div class="col-md-6"><span class="px-md-3"><a href=""><font color="#480a25">Contact</font></a></span></div>
+                                <div class="col-md-6"><span class="px-md-3"><a href=""><font color="#480a25">Disclaimer</font></a></span></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="row">
+                                <div class="col-md-6"><span class="px-md-3"><a href=""><font color="#480a25">About us</font></a></span></div>
+                                <div class="col-md-6"><span class="px-md-3"><a href=""><font color="#480a25">Terms of service</font></a></span></div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col mx-auto text-md-left" style="text-align: center;" ">
+
+                    <!-- Links -->
+                    <h5 class="font-weight-bold mb-4 footer-heading">Stay up to date</h5>
+                    <p style="font-size:17px; font-weight:500;">Get the latest updates from us regarding new collections tracked, analytics and upcoming features (we won't spam you with promotional material).</p>
+
+                    <ul class="list-unstyled">
+
+                        <form class="mt-2">
+                            <div class="input-group">
+                                <div class="col-md-12 pl-0 pb-2">
+                                    <input type="email" class="form-control" placeholder="Enter your email">
+                                </div>
+
+                                <div class="col-md-12 pt-md-0 pl-0 pt-3">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="submit">Subscribe now</button>
+                                    </span>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </form>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+
+        <div class="container text-center py-4">
+            <div class="row">
+                <div class="col-md-12">
+                    ©2021 nftlib. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+
+        <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fa fa-arrow-up" style="color:#1396fe;"></i></a>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 50) {
+                        $('#back-to-top').fadeIn();
+                    } else {
+                        $('#back-to-top').fadeOut();
+                    }
+                });
+                // scroll body to 0px on click
+                $('#back-to-top').click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 400);
+                    return false;
+                });
+            });
+        </script>
+
+        <!-- NEW Footer ENDS -->
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
+</body>
+</html>

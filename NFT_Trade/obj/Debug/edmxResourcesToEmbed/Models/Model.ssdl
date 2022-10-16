@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ph17933550275_NftTradeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="RetrievingCollection">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="one_day_volume" Type="real" />
+    <Property Name="one_day_change" Type="real" />
+    <Property Name="one_day_sales" Type="real" />
+    <Property Name="one_day_average_price" Type="real" />
+    <Property Name="seven_day_volume" Type="real" />
+    <Property Name="seven_day_change" Type="real" />
+    <Property Name="seven_day_sales" Type="real" />
+    <Property Name="seven_day_average_price" Type="real" />
+    <Property Name="thirty_day_volume" Type="real" />
+    <Property Name="thirty_day_change" Type="real" />
+    <Property Name="thirty_day_sales" Type="real" />
+    <Property Name="thirty_day_average_price" Type="real" />
+    <Property Name="total_volume" Type="real" />
+    <Property Name="total_sales" Type="real" />
+    <Property Name="total_supply" Type="real" />
+    <Property Name="count" Type="real" />
+    <Property Name="num_owners" Type="int" />
+    <Property Name="average_price" Type="real" />
+    <Property Name="num_reports" Type="int" />
+    <Property Name="market_cap" Type="real" />
+    <Property Name="floor_price" Type="int" />
+    <Property Name="banner_image_url" Type="nvarchar(max)" />
+    <Property Name="featured_image_url" Type="nvarchar(max)" />
+    <Property Name="image_url" Type="nvarchar(max)" />
+    <Property Name="large_image_url" Type="nvarchar(max)" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="slug" Type="nvarchar(max)" />
+    <Property Name="telegram_url" Type="nvarchar(max)" />
+    <Property Name="twitter_username" Type="nvarchar(max)" />
+    <Property Name="instagram_username" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="int" />
+    <Property Name="CreatedAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" MaxLength="355" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" />
+    <Property Name="Role" Type="int" />
+    <Property Name="IsActive" Type="int" />
+    <Property Name="CreatedAt" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="ph17933550275_NftTradeDBModelStoreContainer">
+    <EntitySet Name="RetrievingCollection" EntityType="Self.RetrievingCollection" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

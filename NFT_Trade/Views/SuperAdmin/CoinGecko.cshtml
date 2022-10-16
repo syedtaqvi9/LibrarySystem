@@ -1,0 +1,1053 @@
+﻿@using PagedList.Mvc
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NFT LIB | Home</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="NODLAYS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="~/Content/images/favicon.ico" type="image/png" sizes="16x16">
+    <script type="text/javascript" src="~/Content/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!--<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>-->     @*       icon           *@
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="~/Content/assets/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedheader/3.2.0/js/dataTables.fixedHeader.min.js"></script> @*This library is used to fix the position of Datatable header*@
+    <script type="text/javascript" src="~/Content/assets/js/plugins/tables/datatables/extensions/row_reorder.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/tables/datatables/extensions/responsive.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/tables/datatables/extensions/buttons.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/pages/datatables_extension_buttons_html5.js"></script>
+
+    <style type="text/css">
+        @@media only screen and (max-width : 768px) {
+            .imgsocial {
+                width: 20%;
+                height: auto;
+            }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: none;
+        }
+    </style>
+
+    <style type="text/css">
+        .bgcolor {
+            color: black;
+            /*   font-weight:600;*/
+        }
+
+            .bgcolor:hover {
+                border-radius: 5px;
+                color: #0011f0 !important;
+                background-color: #deebf7;
+                /*  font-weight:600;*/
+            }
+
+        @@media (max-width: 768px) {
+            .displaynone {
+                display: none !important;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="modal fade" id="GraphModal">
+        <div class="modal-dialog" role="dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="">Price Chart</h4>
+                    <button type="button" class="close text-danger" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+                    <center id="chartDiv" style="width:100%;"></center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container-fluid">
+            <a href="@Url.Action("CoinGecko","SuperAdmin")"><img src="~/Content/images/NFTLIB_logo_v3.png" width="140"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-md-3">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" style="font-size:large">Collections <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("Marketplace","SuperAdmin")" style="font-size:large">Marketplaces <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" action="@Url.Action("Collection","SuperAdmin")">
+                    <input list="searchValues" onkeyup="searchValue(this.value)" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <datalist id="searchValues" onchange="javascript:handleSearch(this)">
+                    </datalist>
+                    <button type="submit" id="searchBtn" class="btn btn-primary" hidden>Add <i class="icon-database-insert position-right"></i></button>
+
+                    @*<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>*@
+                    @*<a class="btn btn-outline-success my-2 my-sm-0" style="margin-left:12px" href="@Url.Action("Login","Auth")">Login</a>*@
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="border-bottom"></div>
+
+    <div class="container-fluid pt-3">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="d-flex justify-content-start">
+
+                    <h3 class="ml-md-3">Top NFT Collections</h3>
+
+                    <span class="px-3">
+                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="background-color: #deebf7">
+                            <div class="btn-group mr-2" role="group" aria-label="First group">
+                                @*<button type="button" class="btn btn-info">24h</button>
+                                    <button type="button" class="btn btn-info">7d</button>
+                                    <button type="button" class="btn btn-info">30d</button>
+                                    <button type="button" class="btn btn-info">All Time</button>*@
+                                &nbsp;
+                                <a href="@Url.Action("CoinGecko","SuperAdmin", new { time = "24h", currency = ViewBag.currencies })" class="btn" style="background-color: #c2e2ff">24h</a> &nbsp;
+                                <a href="@Url.Action("CoinGecko","SuperAdmin", new { time = "7d" , currency = ViewBag.currencies})" class="btn" style="background-color: #c2e2ff">7d</a> &nbsp;
+                                <a href="@Url.Action("CoinGecko","SuperAdmin", new { time = "30d", currency = ViewBag.currencies })" class="btn" style="background-color: #c2e2ff">30d</a>&nbsp;
+                                <a href="@Url.Action("CoinGecko","SuperAdmin", new { time = "All Time", currency = ViewBag.currencies })" class="btn" style="background-color: #c2e2ff">All Time</a>
+                            </div>
+                        </div>
+                    </span>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-md-end justify-content-center">
+
+                <div class="btn-toolbar d-inline-block" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group" style="background-color: #deebf7">
+                        <a href="@Url.Action("CoinGecko","SuperAdmin", new { time = ViewBag.Volume, currency = "USD" })" class="btn" style="background-color: #c2e2ff"><img src="~/Content/images/USD.png" width="18"><span class="pl-2">USD</span></a> &nbsp;
+                        <a href="@Url.Action("CoinGecko","SuperAdmin", new { time = ViewBag.Volume, currency = "ETH" })" class="btn" style="background-color: #c2e2ff"><img src="~/Content/images/2.png" width="18"><span class="pl-2">ETH</span></a>
+                        @*<button type="button" class="btn btn-info"><img src="~/Content/images/USD_Coin_icon.png" width="18"><span class="pl-2">USD</span></button>
+                            <button type="button" class="btn btn-info"><img src="~/Content/images/2.png" width="18"><span class="pl-2">ETH</span></button>*@
+                    </div>
+                </div>
+
+                <div class="btn-toolbar d-inline-block mr-md-2" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <button type="button" class="btn" style="background-color: #c2e2ff" id="Filters"><i class="fa fa-bars"></i><span class="pl-2">Filters</span></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid pt-3">
+        <div class="displaynone row ml-md-2 mr-md-2 text-center">
+
+            <div class="col-md-1 col-4 bgcolor">
+                <span><a href="#"><b>All</b></a></span>
+            </div>
+
+            <div class="col-md-1 col-4 bgcolor">
+                <b>  New</b>
+            </div>
+
+            <div class="col-md-1 col-4 bgcolor">
+                <span><a href="@Url.Action("searchArtCollection","SuperAdmin")"><b>Art</b></a></span>
+            </div>
+
+            <div class="col-md-1 col-4 bgcolor">
+                <b> Music</b>
+            </div>
+
+            <div class="col-md-1 col-4 bgcolor">
+                <b>  Domain Names</b>
+            </div>
+
+            <div class="col-md-2 col-4 bgcolor">
+                <b>  Virtual Worlds</b>
+            </div>
+
+            <div class="col-md-2 col-4 bgcolor">
+                <b>  Trading Cards</b>
+            </div>
+
+            <div class="col-md-1 col-4 bgcolor">
+                <b> Collectibles</b>
+            </div>
+
+            <div class="col-md-1 col-4 bgcolor">
+                <b>  Sports</b>
+            </div>
+
+            <div class="col-md-1 col-4 bgcolor">
+                <b>   Utility</b>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid pt-3" id="FilterDiv">
+        <div class="row ml-md-2 mr-md-2 text-center">
+
+            <div class="col-6 col-md-2">
+                <form action="#">
+                    <select name="cars" id="cars" style="width:100%;">
+                        <option value="volvo" hidden>Category</option>
+                        <option value="volvo">New</option>
+                        <option value="saab">Art</option>
+                        <option value="opel">Music</option>
+                        <option value="audi">Domain Names</option>
+                        <option value="audi">Virtual Worlds</option>
+                        <option value="audi">Trading Cards</option>
+                        <option value="audi">Collectibles</option>
+                        <option value="audi">Sports</option>
+                        <option value="audi">Utility</option>
+                    </select>
+                    <br><br>
+                </form>
+            </div>
+
+            <div class="col-6 col-md-2">
+                <form action="#">
+                    <select name="cars" id="cars" style="width:100%;">
+                        <option value="volvo" hidden>Volume %</option>
+                        <option value="volvo"><-70%</option>
+                        <option value="saab">-70 % to -30%</option>
+                        <option value="opel">-30% to 0%</option>
+                        <option value="audi">0% to 30%</option>
+                        <option value="saab">30% to 70%</option>
+                        <option value="opel">70% to 150%</option>
+                        <option value="audi">>150%</option>
+                    </select>
+                    <br><br>
+                </form>
+            </div>
+
+            <div class="col-6 col-md-2">
+                <form action="#">
+                    @{
+                        if (ViewBag.currencies == "ETH")
+                        {
+                            <select name="cars" id="cars" style="width:100%;">
+                                <option value="volvo" hidden>Market Cap</option>
+                                <option value="volvo"> <25 ETH</option>
+                                <option value="saab">25 – 250 ETH</option>
+                                <option value="opel">250 – 2500 ETH</option>
+                                <option value="audi">2500 – 25000 ETH</option>
+                                <option value="audi">25000+ ETH</option>
+                            </select>
+                        }
+                        else
+                        {
+                            <select name="cars" id="cars" style="width:100%;">
+                                <option value="volvo" hidden>Market Cap</option>
+                                <option value="volvo"> <100k USD</option>
+                                <option value="saab"> 100k – 1mil USD</option>
+                                <option value="opel"> 1mil – 10mil USD</option>
+                                <option value="audi"> 10mil – 100mil USD</option>
+                                <option value="audi"> 100mil+ USD</option>
+                            </select>
+                        }
+                    }
+                    <br><br>
+                </form>
+            </div>
+
+            <div class="col-6 col-md-1">
+                <form action="@Url.Action("FormFilter","SuperAdmin", new { time = ViewBag.Volume, currency = ViewBag.currencies })" method="post" onchange="javascript:OwnerHandleSelect(this)">
+                    <select name="Owner" id="owners" style="width:100%;">
+                        <option value="Owners" hidden>Owners</option>
+                        <option value="<500"> <500</option>
+                        <option value="500-1000">500-1000</option>
+                        <option value="1000-5000">1000-5000</option>
+                        <option value="5000-50000">5000-50000</option>
+                        <option value="50000+">50000+</option>
+                    </select>
+                    <button type="submit" id="OwnerBtn" class="btn btn-primary" hidden>Add <i class="icon-database-insert position-right"></i></button>
+                    <br><br>
+                </form>
+            </div>
+
+            <div class="col-6 col-md-1">
+                <form action="@Url.Action("FormFilter","SuperAdmin", new { time = ViewBag.Volume, currency = ViewBag.currencies })" method="post" onchange="javascript:AssetHandleSelect(this)">
+                    <select name="Asset" id="assets" style="width:100%;">
+                        <option value="Assets" hidden>Assets</option>
+                        <option value="<500"> <500</option>
+                        <option value="500-1000">500-1000</option>
+                        <option value="1000-5000">1000-5000</option>
+                        <option value="5000-50000">5000-50000</option>
+                        <option value="50000+">50000+</option>
+                    </select>
+                    <button type="submit" id="AssetBtn" class="btn btn-primary" hidden>Add <i class="icon-database-insert position-right"></i></button>
+                    <br><br>
+                </form>
+            </div>
+
+            <div class="col-6 col-md-2">
+                <form action="#">
+                    @{
+                        if (ViewBag.currencies == "ETH")
+                        {
+                            <select name="cars" id="cars" style="width:100%;">
+                                <option value="volvo" hidden>Avg. Price</option>
+                                <option value="volvo"> <0.025 ETH</option>
+                                <option value="saab">0.025 – 0.125 ETH</option>
+                                <option value="opel">0.125 – 1.25 ETH</option>
+                                <option value="audi">1.25 – 6.5 ETH</option>
+                                <option value="audi">6.5+ ETH</option>
+                            </select> }
+                        else
+                        {
+                            <select name="cars" id="cars" style="width:100%;">
+                                <option value="volvo" hidden>Avg. Price</option>
+                                <option value="volvo"> <100 USD</option>
+                                <option value="saab"> 100 – 500 USD</option>
+                                <option value="opel"> 500 – 5000 USD</option>
+                                <option value="audi"> 5000 – 25000 USD</option>
+                                <option value="audi"> 25000 USD+ </option>
+                            </select>}
+                    }
+                    <br><br>
+                </form>
+            </div>
+
+            <div class="col-6 col-md-1">
+                <form action="@Url.Action("FormFilter","SuperAdmin", new { time = ViewBag.Volume, currency = ViewBag.currencies })" method="post" onchange="javascript:ChainHandleSelect(this)">
+                    <select name="Chain" id="Chains" style="width:100%;">
+                        <option value="Chain" hidden>Chain</option>
+                        <option value="TBD">TBD</option>
+                        <option value="USD">USD</option>
+                        <option value="ETH">ETH</option>
+                    </select>
+                    <button type="submit" id="ChainBtn" class="btn btn-primary" hidden>Add <i class="icon-database-insert position-right"></i></button>
+                    <br><br>
+                </form>
+            </div>
+
+            <div class="col-6 col-md-1">
+                <form action="@Url.Action("FormFilter","SuperAdmin", new { time = ViewBag.Volume, currency = ViewBag.currencies })" method="post" onchange="javascript:VerifiedHandleSelect(this)">
+                    <select name="Verify" id="Verified" style="width:100%;">
+                        <option value="Verified" hidden>Verified</option>
+                        <option value="All">All</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    <button type="submit" id="VerifiedBtn" class="btn btn-primary" hidden>Add <i class="icon-database-insert position-right"></i></button>
+                    <br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    @*<div class="row m-10">
+            <div class="col-lg-3" style="margin-top:20px; margin-left:20px;"><h4 class="text-bold">Top NFT Collections</h4></div>
+
+            <div class="col-lg-2 col-sm-6">
+                <div style="background-color:azure; margin-top:20px;margin-left:20px; padding:5px; border-radius:5px;">
+
+                    <a href="@Url.Action("CoinGecko","SuperAdmin", new { time = "24h" })">24h</a> &nbsp;
+                    <a href="@Url.Action("CoinGecko","SuperAdmin", new { time = "7d" })">7d</a> &nbsp;
+                    <a href="@Url.Action("CoinGecko","SuperAdmin", new { time = "30d" })">30d</a>&nbsp;
+                    <a href="#">All Time</a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 pull-right">
+                <div style="background-color:azure; margin-top:20px;margin-left:20px; padding:5px; border-radius:5px;">
+                    <a href="@Url.Action("CoinGecko","SuperAdmin", new { currency = "USD" })">USD</a> &nbsp;
+                    <a href="@Url.Action("CoinGecko","SuperAdmin", new { currency = "ETH" })">ETH</a>
+                </div>
+            </div>
+        </div>*@
+
+    @*Table For Auction*@
+    <div class="container-fluid pt-5 pb-3">
+        @*<h2 class="trending-coins ml-md-3 pb-3" style="margin-top:5px; text-align:center">Retrieving Auctions</h2>*@
+        <div class="col-md-12">
+            <div class="table-responsive">
+                <table id="mytable" class="table table-bordred">
+                    <thead class="table-heading bg-white">
+                        <tr>
+                            <th></th>
+                            <th>#</th>
+                            <th>Logo</th>
+                            <th>Collection</th>
+                            <th>Chain</th>
+                            <th>Category</th>
+                            <th>Volume (@ViewBag.Volume)</th>
+                            <th>Volume Change% (@ViewBag.Volume )</th>
+                            <th>Sales (@ViewBag.Volume)</th>
+                            <th>Estimated MarketCap</th>
+                            <th>#Owners</th>
+                            <th>#Assets</th>
+                            <th>Average Price (@ViewBag.Volume)</th>
+                            <th>Floor Price (@ViewBag.Volume)</th>
+                            <th>Owner (@ViewBag.Volume)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (ViewBag.SingleAsset != null)
+                        {
+                            int a = 1;
+                            foreach (var item in ViewBag.SingleAsset)
+                            {
+                                if (item.id != 0)
+                                {
+                                    <tr style="min-height:100px">
+                                        <td><a href=""><i class="bi bi-star"></i></a></td>
+
+                                        @*<td>@a</td>*@
+                                        <td></td>
+
+                                        @{
+                                            if (item.owner.config == "")
+                                            {
+                                                <td><span><img src="@item.image_thumbnail_url" width="25"> </span></td>
+                                            }
+                                            else
+                                            {
+                                                <td><span><img src="@item.image_thumbnail_url" width="25"> </span> <img class="badge1" src="~/Content/CollectionImages/badge.png" width="10" style="margin-left:-8px" /></td>
+                                            }
+                                        }
+
+                                        @*<td><a href="@item.permalink" style="color: #8a3bc5;" target="_blank"> @item.collection.name</a></td>*@
+                                        <td><span>@*<img src="@item.image_thumbnail_url" width="25px">*@<a href="@Url.Action("NFTCollection","SuperAdmin", new { description = item.description, image_original_url= item.image_original_url, name = item.name, schema_name = item.asset_contract.schema_name })" style="color: #57B662;" target="_blank"> @item.collection.name</a></span><img class="badge1" src="~/Content/images/eth.png" width="10" style="margin-left:2px" /></td>
+
+                                        @{
+                                            if (ViewBag.chain == "ETH")
+                                            {
+                                                <td>ETH</td>
+                                            }
+                                            else if (ViewBag.chain == "TBD")
+                                            {
+                                                <td>TBD</td>
+                                            }
+                                            else
+                                            {
+                                                <td>USD</td>
+                                            }
+                                        }
+
+                                        <td>@item.asset_contract.name</td>
+
+                                        @{
+                                            string volume = "";
+                                            double change = 0;
+                                            double sales = 0;
+                                            double average = 0;
+                                            if (ViewBag.Volume == "24h" || ViewBag.Volume == "All Time")
+                                            {
+                                                volume = item.collection.stats.one_day_volume.ToString("0.00");
+                                                change = Math.Round((item.collection.stats.one_day_change), 2);
+                                                sales = Math.Round((item.collection.stats.one_day_change), 2);
+                                                average = Math.Round((item.collection.stats.one_day_average_price), 2);
+                                            }
+                                            else if (ViewBag.Volume == "7d")
+                                            {
+                                                volume = item.collection.stats.seven_day_volume.ToString("0.00");
+                                                change = Math.Round((item.collection.stats.seven_day_change), 2);
+                                                sales = Math.Round((item.collection.stats.seven_day_change), 2);
+                                                average = Math.Round((item.collection.stats.seven_day_average_price), 2);
+                                            }
+                                            else if (ViewBag.Volume == "30d")
+                                            {
+                                                volume = item.collection.stats.thirty_day_volume.ToString("0.00");
+                                                change = Math.Round((item.collection.stats.thirty_day_change), 2);
+                                                sales = Math.Round((item.collection.stats.thirty_day_change), 2);
+                                                average = Math.Round((item.collection.stats.thirty_day_average_price), 2);
+                                            }
+                                        }
+
+                                        @{
+                                            if (ViewBag.currencies == "ETH")
+                                            {
+                                                <td style="color: black;">@volume <br>ETH</td>
+                                            }
+                                            else
+                                            {
+                                                var dollar = ViewBag.Dollar;
+                                                var vaa = Convert.ToDouble(volume);
+                                                var valuex = vaa * dollar;
+                                                <td style="color: black;">@(valuex) <br> USD</td>
+                                            }
+                                        }
+
+                                        @if (change >= 0)
+                                        {
+                                            <td style="color: green;">+@change%</td>
+                                        }
+                                        else
+                                        {
+                                            <td style="color: red;">@change%</td>
+                                        }
+
+                                        <td style="color: black;">@sales</td>
+
+                                        @*<td style="color: black;">@(item.collection.stats.one_day_change)%</td>*@
+
+                                        @{
+                                            if (ViewBag.currencies == "ETH")
+                                            {
+                                                <td style="color: black;">@(item.collection.stats.market_cap.ToString("0.00")) <br> ETH</td>
+                                            }
+                                            else
+                                            {
+                                                <td style="color: black;">@(Convert.ToInt32(item.collection.stats.market_cap) * ViewBag.Dollar) <br> USD</td>
+                                            }
+                                        }
+
+                                        <td style="color: black;">@(item.collection.stats.num_owners)</td>
+
+                                        <td style="color: black;">@(item.collection.stats.count)</td>
+
+                                        @{
+                                            if (ViewBag.currencies == "ETH")
+                                            {
+                                                <td style="color: black;"> @average <br> ETH</td>
+                                            }
+                                            else
+                                            {
+                                                <td style="color: black;">@(Convert.ToInt32(average) * ViewBag.Dollar) <br> USD</td>
+                                            }
+                                        }
+
+                                        @{
+                                            if (ViewBag.currencies == "ETH")
+                                            {
+                                                <td style="color: black;">@(item.collection.stats.floor_price.ToString("0.00")) <br> ETH</td>
+                                            }
+                                            else
+                                            {
+                                                <td style="color: black;">@(Convert.ToInt32(item.collection.stats.floor_price) * ViewBag.Dollar) <br> USD</td>
+                                            }
+                                        }
+
+                                        @if (a % 2 == 0)
+                                        {
+                                            <td class="text-center">
+                                                <a onclick="generateUpChart()">
+                                                    <i style="font-size:1.2em" class="fa fa-arrow-circle-o-up text-success"></i>
+                                                </a>
+                                            </td>
+                                        }
+                                        else
+                                        {
+                                            <td class="text-center">
+                                                <a onclick="generateDownChart()">
+                                                    <i style="font-size:1.2em" class="fa fa-arrow-circle-o-down  text-danger" aria-hidden="true"></i>
+                                                </a>
+                                            </td>
+                                        }
+                                    </tr>
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td><a href=""><i class="bi bi-star"></i></a></td>
+                                        <td>@a</td>
+                                        <td><span><img src="" alt="NFT"></span></td>
+                                        <td style="color: black;"></td>
+                                        <td style="color: black;"></td>
+                                        <td style="color: black;"></td>
+                                        <td style="color: black;"></td>
+                                        <td style="color: black;"></td>
+                                        <td style="color: black;"></td>
+                                        <td style="color: black;"></td>
+                                        <td style="color: black;"></td>
+                                        <td style="color: black;"></td>
+                                        <td style="color: black;"></td>
+                                        <td style="color: black;"></td>
+                                        <td style="color: black;"></td>
+                                    </tr>
+                                }
+                                a = a + 1;
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td><a href=""><i class="bi bi-star"></i></a></td>
+                                <td>0</td>
+                                <td><span><img src="" alt="NFT"></span></td>
+                                <td style="color: black;"></td>
+                                <td style="color: black;"></td>
+                                <td style="color: black;"></td>
+                                <td style="color: black;"></td>
+                                <td style="color: black;"></td>
+                                <td style="color: black;"></td>
+                                <td style="color: black;"></td>
+                                <td style="color: black;"></td>
+                                <td style="color: black;"></td>
+                                <td style="color: black;"></td>
+                                <td style="color: black;"></td>
+                                <td style="color: black;"></td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+            @*<nav class="d-flex justify-content-center" aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>*@
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <h2 class="trending-coins ml-md-3 pb-3">Trending Coins</h2>
+        <div class="row row-cols-5 mx-md-1">
+
+            <div class="col">
+                <div class="card p-3 mb-2 shadow p-3 mb-5 bg-white rounded">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="mr-2">
+                                <img src="~/Content/gala.png" width="35" />
+                            </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">Gala</h6> <span>$0.384984</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card p-3 mb-2 shadow p-3 mb-5 bg-white rounded">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="mr-2">
+                                <img src="~/Content/utrust.png" width="35" />
+                            </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">Utrust</h6> <span>$0.384984</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card p-3 mb-2 shadow p-3 mb-5 bg-white rounded">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="mr-2">
+                                <img src="~/Content/solona.png" width="35" />
+                            </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">Solana</h6> <span>$0.384984</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card p-3 mb-2 shadow p-3 mb-5 bg-white rounded">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="mr-2">
+                                <img src="~/Content/avalanche.png" width="35" />
+                            </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">Avalanche</h6> <span>$0.384984</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card p-3 mb-2 shadow p-3 mb-5 bg-white rounded">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="mr-2">
+                                <img src="~/Content/smooth.png" width="35px" />
+                            </div>
+                            <div class="ms-2 c-details">
+                                <h6 class="mb-0">Smooth Love Potion</h6> <span>$0.384984</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="background-color: #F8FAFD;">
+        <div class="container-fluid pb-3">
+            <div class="row row-cols-2 mx-md-1">
+
+                <div class="col pt-5">
+                    <div class="newsletter-fonts"> Be the first to know about <b>crypto news every day</b></div><p class="newsletter-font-p mt-1">Get crypto analysis, news and updates right to your inbox! Sign up here so you don't miss a single newsletter</p>
+                    <form class="mt-5" action="@Url.Action("Newsletter","SuperAdmin")" method="post">
+                        <div class="text-left" id="alertMsg" style="color:@ViewBag.color ; font-weight:bold">
+                            @ViewBag.msg
+                        </div>
+                        <div class="input-group">
+                            <div class="col-md-6 pl-0">
+                                <input type="email" class="form-control" placeholder="Enter your email" name="Email">
+                                <input name="action" value="coinGecko" style="display:none">
+                            </div>
+
+                            <div class="col-md-4 pt-md-0 pl-0 pt-3">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="submit">Subscribe now</button>
+                                </span>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col d-flex justify-content-end">
+                    <img src="~/Content/images/bg.jpeg">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="hidedisc alert alert-warning alert-dismissible fade show" role="alert">
+        <strong style="font-size:12px;"><i class="fa fa-exclamation-triangle fa-lg"></i> <u>IMPORTANT DISCLAIMER:</u></strong>
+        <span style="font-size:13px;">All information provided on our website, social media pages and other platforms is for general information only and it’s procured from third party sources. We offer no warranty for the content provided regarding accuracy. The content we provide is in no way financial advice or legal advice. NFT’s are a highly risky investing vehicle and you should consult a financial advisor before making any decision. No content on our website is meant to be a solicitation or offer; all the content is for information only.</span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <!--Footer STARTS -->
+    <footer class="page-footer font-small indigo pt-3">
+        <!-- Footer Links -->
+        <div class="container-fluid text-md-left">
+            <!-- Grid row -->
+            <div class="row row-cols-12 mx-1">
+                <!-- Grid column -->
+                <div class="col mx-auto">
+                    <img class="pb-3" src="~/Content/images/NFTLIB_logo_v3.png" width="170px">
+                    <p style="font-size:17px; font-weight:500;">Nftlib provides a fundamental analysis of the NFT market. We are tracking all key indicators necessary for users to learn about any collection.</p>
+                </div>
+
+                <div class="col mx-auto text-md-left d-flex justify-content-center" style="text-align: center;">
+
+                    <!-- Links -->
+                    <ul class="list-unstyled">
+                        <li>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="~/Content/images/fb.png" width="50px"></a></span>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="~/Content/images/insta.png" width="50px"></a></span>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="~/Content/images/linkedin.png" width="50px"></a></span>
+                            <span class="px-md-3"><a href=""><img class="imgsocial" src="~/Content/images/twitter.png" width="50px"></a></span>
+                        </li>
+
+                        <li>
+                            <div class="row pt-md-5 pt-5">
+                                <div class="col-md-6"><span class="px-md-3"><a href="@Url.Action("Contact","SuperAdmin")"><font color="#480a25">Contact</font></a></span></div>
+                                <div class="col-md-6"><span class="px-md-3"><a href=""><font color="#480a25">Disclaimer</font></a></span></div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="row">
+                                <div class="col-md-6"><span class="px-md-3"><a href="@Url.Action("About","SuperAdmin")"><font color="#480a25">About us</font></a></span></div>
+                                <div class="col-md-6"><span class="px-md-3"><a href=""><font color="#480a25">Terms of service</font></a></span></div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <!-- Grid column -->
+                <div class="col mx-auto text-md-left" style="text-align: center;" ">
+
+                    <!-- Links -->
+                    <h5 class="font-weight-bold mb-4 footer-heading">Stay up to date</h5>
+                    <p style="font-size:17px; font-weight:500;">Get the latest updates from us regarding new collections tracked, analytics and upcoming features (we won't spam you with promotional material).</p>
+
+                    <ul class="list-unstyled">
+                        <form class="mt-2" action="@Url.Action("Newsletter","SuperAdmin")" method="post">
+                            <div class="input-group">
+                                <div class="col-md-12 pl-0 pb-2">
+                                    <input type="email" class="form-control" placeholder="email@gmail.com">
+                                </div>
+
+                                <div class="col-md-12 pt-md-0 pl-0 pt-3">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="submit">Subscribe now</button>
+                                    </span>
+                                </div>
+                                <div class="col-md-2"></div>
+                            </div>
+                        </form>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+
+        <div class="container text-center py-4">
+            <div class="row">
+                <div class="col-md-12">
+                    ©2021 nftlib. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+
+        <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fa fa-arrow-up" style="color:#1396fe;"></i></a>
+    </footer>
+    <!--Footer ENDS -->
+
+    <script>
+
+        setDataTable();
+        function setDataTable() {
+            var t = $('#mytable').DataTable(
+                {
+                    "fixedHeader": true, //used to fixed the header (a library is required for this, used above)
+                    "pageLength": 100,
+                    "ScrollX": true,
+                    "columnDefs":
+                        [
+                            { orderable: false, targets: 0 },
+                            { orderable: false, targets: 1 },
+                            { orderable: false, targets: 2 },
+                            { orderable: false, targets: 3 },
+                            { orderable: false, targets: 4 },
+                            { orderable: false, targets: 5 },
+                            { orderable: false, targets: 14 }
+                        ]
+                });
+
+            t.on('order.dt search.dt', function () {
+                t.column(1, { search: 'applied', order: 'applied' }).nodes().each(function (cell, i) {
+                    cell.innerHTML = i + 1;
+                });
+            }).draw();
+
+        }
+    </script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script>
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+        function generateUpChart() {
+            $('chartDiv').empty();
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('timeofday', 'time');
+            data.addColumn('number', 'Price');
+
+            data.addRows(
+                [
+                    [[1, 00, 00], 7.5],
+                    [[2, 00, 00], 8.1],
+                    [[2, 00, 00], 9.2],
+                    [[3, 00, 00], 10.3],
+                    [[8, 00, 00], 10.5],
+                    [[9, 00, 00], 11.7],
+                    [[10, 00, 00], 12.6],
+                    [[11, 00, 00], 12.5],
+                    [[12, 00, 00], 13.1],
+                    [[13, 00, 00], 13.5],
+                    [[14, 00, 00], 13.9],
+                    [[15, 00, 00], 14.0],
+                    [[16, 00, 00], 14.3],
+                    [[17, 00, 00], 14.5],
+                    [[18, 00, 00], 14.8],
+                    [[19, 00, 00], 15.1],
+                    [[20, 00, 00], 16.5],
+                    [[21, 00, 00], 15.9],
+                    [[22, 00, 00], 16.8],
+                    [[23, 00, 00], 16.9],
+                    [[24, 00, 00], 17.3]
+
+
+                ]);
+
+            var options = {
+                height: 400,
+                title: '',
+                legend: 'none',
+                series: {
+                    0: { color: 'green' },
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chartDiv'));
+
+            chart.draw(data, options);
+
+            $('#GraphModal').modal('show');
+        }
+
+        function generateDownChart() {
+
+            $('chartDiv').empty();
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('timeofday', 'time');
+            data.addColumn('number', 'Price');
+
+            data.addRows(
+                [
+                    [[1, 00, 00], 70.5],
+                    [[2, 00, 00], 68.1],
+                    [[2, 00, 00], 67.2],
+                    [[3, 00, 00], 66.3],
+                    [[8, 00, 00], 63.5],
+                    [[9, 00, 00], 62.7],
+                    [[10, 00, 00], 61.6],
+                    [[11, 00, 00], 60.5],
+                    [[12, 00, 00], 59.1],
+                    [[13, 00, 00], 59.5],
+                    [[14, 00, 00], 58.9],
+                    [[15, 00, 00], 57.0],
+                    [[16, 00, 00], 56.3],
+                    [[17, 00, 00], 55.5],
+                    [[18, 00, 00], 40.8],
+                    [[19, 00, 00], 44.1],
+                    [[20, 00, 00], 43.5],
+                    [[21, 00, 00], 42.9],
+                    [[22, 00, 00], 42.8],
+                    [[23, 00, 00], 41.9],
+                    [[24, 00, 00], 40.3]
+
+
+                ]);
+
+            var options = {
+                height: 400,
+                title: '',
+                legend: 'none',
+                series: {
+                    0: { color: 'red' },
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chartDiv'));
+
+            chart.draw(data, options);
+
+            $('#GraphModal').modal('show');
+        }
+
+        function searchValue(key) {
+            if (key != "") {
+                $.ajax({
+                    type: 'Post',
+                    url: "../SuperAdmin/GetSearchValues",
+                    dataType: "json",
+                    data: {
+                        key: key
+                    },
+                    success: function (response) {
+                        $('#searchValues').empty();
+                        var i = 0;
+                        $.each(response, function () {
+                            $('#searchValues').append('<option value="' + response[i] + '">' + response[i] + '</option>');
+                            i++;
+                        });
+                    },
+                    error: function () {
+                        // alert("Search ajax Failed");
+                    }
+                });
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#back-to-top').fadeIn();
+                } else {
+                    $('#back-to-top').fadeOut();
+                }
+            });
+            // scroll body to 0px on click
+            $('#back-to-top').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 400);
+                return false;
+            });
+        });
+    </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $("#FilterDiv").hide();
+            $("#Filters").click(function () {
+                $("#FilterDiv").toggle();
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        function OwnerHandleSelect(elm) {
+            var elmval = elm.value;
+            $('#OwnerBtn').click();
+        }
+        function AssetHandleSelect(elm) {
+            $('#AssetBtn').click();
+        }
+        function ChainHandleSelect(elm) {
+            $('#ChainBtn').click();
+        }
+        function VerifiedHandleSelect(elm) {
+            $('#VerifiedBtn').click();
+        }
+
+        function handleSearch(elm) {
+            alert("hi");
+            var elmval = elm.value;
+            $('#searchBtn').click();
+        }
+
+    </script>
+
+</body>
+</html>

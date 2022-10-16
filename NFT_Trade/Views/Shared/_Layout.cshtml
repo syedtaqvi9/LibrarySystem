@@ -1,0 +1,173 @@
+﻿@using NFT_Trade.Models
+@{
+    DatabaseEntities db = new DatabaseEntities();
+
+    var identity = (System.Security.Claims.ClaimsPrincipal)System.Threading.Thread.CurrentPrincipal;
+
+    var userId = identity.Claims.Where(c => c.Type == System.Security.Claims.ClaimTypes.Sid).Select(c => c.Value).SingleOrDefault();
+    int id = Convert.ToInt32(userId);
+    User loggedInUser = db.Users.Where(x => x.Id == id).FirstOrDefault();
+
+}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.title</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/assets/css/colors.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="~/Content/assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/loaders/blockui.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/forms/wizards/stepy.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/forms/selects/select2.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/core/libraries/jasny_bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/forms/validation/validate.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/visualization/d3/d3.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/forms/styling/switchery.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/ui/moment/moment.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/pickers/daterangepicker.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/tables/datatables/datatables.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/tables/datatables/extensions/row_reorder.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/tables/datatables/extensions/responsive.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/tables/datatables/extensions/pdfmake/vfs_fonts.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/tables/datatables/extensions/buttons.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/pages/datatables_extension_buttons_html5.js"></script>
+    <script type="text/javascript" src="~/Content/ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/core/app.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/pages/datatables_extension_row_reorder.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/pages/wizard_stepy.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/plugins/ui/ripple.min.js"></script>
+    <script type="text/javascript" src="~/Content/assets/js/pages/dashboard.js"></script>
+</head>
+<body class="pace-done">
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <div class="navbar navbar-inverse bg-indigo">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+                <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+            </ul>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            <ul class="nav navbar-nav">
+            </ul>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown dropdown-user">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <span>@loggedInUser.Name </span>
+                            <i class="caret"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="@Url.Action("EditProfile","Auth")"><i class="icon-cog5"></i> Update Profile</a></li>
+                            <li><a href="@Url.Action("UpdatePassword","Auth")"><i class="icon-lock2"></i> Update Password</a></li>
+                            <li class="divider"></li>
+                            <li><a href="@Url.Action("Logout","Auth")"><i class="icon-switch2"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /main navbar -->
+    <!-- Page container -->
+    <div class="page-container" style="min-height:671.5999984741211px">
+
+        <!-- Page content -->
+        <div class="page-content">
+
+            <!-- Main sidebar -->
+            <div class="sidebar sidebar-main sidebar-default">
+                <div class="sidebar-content">
+
+                    <!-- User menu -->
+                    <div class="sidebar-user-material">
+                        <div class="category-content">
+                            <div class="sidebar-user-material-content">
+                                @*<a href="#" class="legitRipple"><img src="~/Content/assets/images/placeholder.jpg" class="img-circle img-responsive" alt=""></a>*@
+                                <h6>@loggedInUser.Name</h6>
+                                <span class="text-size-small">@loggedInUser.Email</span>
+                            </div>
+
+                            <div class="sidebar-user-material-menu">
+                                <a href="#user-nav" data-toggle="collapse" class="legitRipple" aria-expanded="true"><span>My account</span> <i class="caret"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="navigation-wrapper collapse" id="user-nav" aria-expanded="true" style="">
+                            <ul class="navigation">
+                                <li><a href="@Url.Action("EditProfile","Auth")" class="legitRipple"><i class="icon-user-plus"></i> <span>Update Profile</span></a></li>
+                                <li class="divider"></li>
+                                <li><a href="@Url.Action("UpdatePassword","Auth")" class="legitRipple"><i class="icon-cog5"></i> <span>Change Password</span></a></li>
+                                <li><a href="@Url.Action("Logout","Auth")" class="legitRipple"><i class="icon-switch2"></i> <span>Logout</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="sidebar-category sidebar-category-visible">
+                        <div class="category-content no-padding">
+                            <ul class="navigation navigation-main navigation-accordion">
+                                <li class="navigation-header"><span>Main</span> <i class="icon-menu" title="" data-original-title="Main pages"></i></li>
+                                @if (loggedInUser.Role == 1)
+                                {
+                                    <li class="active"><a href="@Url.Action("Dashboard", "SuperAdmin")" class="legitRipple"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+
+                                    <li class="">
+                                        <a href="#" class="has-ul legitRipple"><i class="icon-people"></i> <span>Manage Admins</span></a>
+                                        <ul class="hidden-ul" style="display: none;">
+                                            <li><a href="@Url.Action("AddAdmin", "SuperAdmin")" class="legitRipple">Add Admin</a></li>
+                                            <li><a href="@Url.Action("ViewAdmin", "SuperAdmin")" class="legitRipple">View Admins</a></li>
+                                        </ul>
+                                    </li>
+
+                                }
+                                else
+                                if (loggedInUser.Role == 2)
+                                {
+                                    <li class="active"><a href="@Url.Action("Dashboard", "Admin")" class="legitRipple"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+
+                                    <li class="">
+                                        <a href="#" class="has-ul legitRipple"><i class="icon-people"></i> <span>Manage Users</span></a>
+                                        <ul class="hidden-ul" style="display: none;">
+                                            <li><a href="@Url.Action("AddUser", "Admin")" class="legitRipple">Add User</a></li>
+                                            <li><a href="@Url.Action("ViewUser", "Admin")" class="legitRipple">View Users</a></li>
+                                        </ul>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li><a href="@Url.Action("Dashboard","User")" class="legitRipple"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /main navigation -->
+
+                </div>
+            </div>
+            <!-- /main sidebar -->
+            <!-- Main content -->
+            <div class="content-wrapper">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+    <div class="daterangepicker dropdown-menu ltr opensleft"><div class="calendars"><div class="calendar left"><div class="calendar-table"></div><div class="daterangepicker_input"><div class="calendar-time" style="display: none;"><div></div></div></div></div><div class="calendar right"><div class="calendar-table"></div><div class="daterangepicker_input"><div class="calendar-time" style="display: none;"><div></div></div></div></div></div><div class="ranges"><ul><li data-range-key="Today">Today</li><li data-range-key="Yesterday">Yesterday</li><li data-range-key="Last 7 Days">Last 7 Days</li><li data-range-key="Last 30 Days">Last 30 Days</li><li data-range-key="This Month">This Month</li><li data-range-key="Last Month">Last Month</li><li data-range-key="Custom Range">Custom Range</li></ul><div class="daterangepicker-inputs"><div class="daterangepicker_input"><span class="start-date-label">Start date:</span><input class="form-control" type="text" name="daterangepicker_start" value=""><i class="icon-calendar3"></i></div><div class="daterangepicker_input"><span class="end-date-label">End date:</span><input class="form-control" type="text" name="daterangepicker_end" value=""><i class="icon-calendar3"></i></div></div><div class="range_inputs"><button class="applyBtn btn btn-sm btn-small bg-slate-600 btn-block legitRipple" disabled="disabled" type="button">Apply</button> <button class="cancelBtn btn btn-sm btn-small btn-default btn-block legitRipple" type="button">Cancel</button></div></div></div><div class="d3-tip" style="position: absolute; top: 0px; display: none; pointer-events: none; box-sizing: border-box;"></div><div class="d3-tip" style="position: absolute; top: 0px; display: none; pointer-events: none; box-sizing: border-box;"></div><div class="d3-tip" style="position: absolute; top: 0px; display: none; pointer-events: none; box-sizing: border-box;"></div><div class="d3-tip" style="position: absolute; top: 0px; display: none; pointer-events: none; box-sizing: border-box;"></div><div class="d3-tip" style="position: absolute; top: 0px; display: none; pointer-events: none; box-sizing: border-box;"></div><div class="d3-tip" style="position: absolute; top: 0px; display: none; pointer-events: none; box-sizing: border-box;"></div><div class="d3-tip" style="position: absolute; top: 0px; display: none; pointer-events: none; box-sizing: border-box;"></div><div class="d3-tip" style="position: absolute; top: 0px; display: none; pointer-events: none; box-sizing: border-box;"></div>
+</body>
+</html>
